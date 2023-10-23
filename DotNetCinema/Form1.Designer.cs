@@ -41,6 +41,7 @@
             // 
             // header
             // 
+            header.Anchor = AnchorStyles.None;
             header.AutoSize = true;
             header.BackColor = Color.Transparent;
             header.Font = new Font("Bauhaus 93", 36F, FontStyle.Bold, GraphicsUnit.Point);
@@ -54,14 +55,16 @@
             // 
             // login_username
             // 
+            login_username.Anchor = AnchorStyles.None;
             login_username.Location = new Point(359, 207);
             login_username.Name = "login_username";
-            login_username.Size = new Size(373, 27);
+            login_username.Size = new Size(370, 27);
             login_username.TabIndex = 1;
             login_username.Text = "Username";
             // 
             // login_password
             // 
+            login_password.Anchor = AnchorStyles.None;
             login_password.Location = new Point(359, 301);
             login_password.Name = "login_password";
             login_password.Size = new Size(373, 27);
@@ -69,6 +72,7 @@
             // 
             // username_label
             // 
+            username_label.Anchor = AnchorStyles.None;
             username_label.AutoSize = true;
             username_label.BackColor = Color.Transparent;
             username_label.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -81,6 +85,7 @@
             // 
             // password_label
             // 
+            password_label.Anchor = AnchorStyles.None;
             password_label.AutoSize = true;
             password_label.BackColor = Color.Transparent;
             password_label.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -92,6 +97,7 @@
             // 
             // login_btn
             // 
+            login_btn.Anchor = AnchorStyles.None;
             login_btn.AutoEllipsis = true;
             login_btn.BackColor = Color.DarkRed;
             login_btn.FlatAppearance.BorderSize = 0;
@@ -123,6 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.Black;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1088, 695);
@@ -134,6 +141,7 @@
             Controls.Add(login_username);
             Controls.Add(header);
             ForeColor = SystemColors.ButtonFace;
+            MaximizeBox = false;
             Name = "Form1";
             RightToLeft = RightToLeft.No;
             Text = "Dot Net Cinema";
