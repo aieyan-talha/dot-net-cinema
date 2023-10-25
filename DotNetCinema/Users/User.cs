@@ -41,6 +41,7 @@ namespace DotNetCinema.Users
             UserName = string.Empty;
             DOB = DateTime.MinValue;
             Type = UserType.Admin;
+            Gender = string.Empty;
         }
 
         public User(int id, string firstName, string lastName, string email, string phone, string password, string userName, DateTime dob, string gender, UserType type)
