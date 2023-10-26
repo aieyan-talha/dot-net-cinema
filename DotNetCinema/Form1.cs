@@ -43,10 +43,20 @@ namespace DotNetCinema
             {
                 MessageBox.Show("Login Successfull");
                 invalid_login_label.Text = string.Empty;
-            } else
+            }
+            else
             {
                 invalid_login_label.Text = "Invalid username or password";
             }
+        }
+
+        private void register_btn_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+
+            this.Hide();
+            registerForm.ShowDialog();
+            
         }
     }
 }

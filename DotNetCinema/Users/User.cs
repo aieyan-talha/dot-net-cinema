@@ -119,6 +119,55 @@ namespace DotNetCinema.Users
         }
 
         /// <summary>
+        /// Method adds the current user into the DB
+        /// </summary>
+        public bool AddUserToDB()
+        {
+            //Sql command to insert data
+            string insertQuery = "INSERT INTO [dbo].[Users] (first_name, last_name, email, phone, password, DOB, gender, type, username) " +
+                "VALUES (@firstName, @lastName, @email, @phone, @password, @dob, @gender, @type, @username)";
+
+            string connectionString = Common.connectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@firstName", this.FirstName);
+                        command.Parameters.AddWithValue("@lastName", this.LastName);
+                        command.Parameters.AddWithValue("@email", this.Email);
+                        command.Parameters.AddWithValue("@phone", this.Phone);
+                        command.Parameters.AddWithValue("@password", this.Password);
+                        command.Parameters.AddWithValue("@DOB", this.DOB);
+                        command.Parameters.AddWithValue("@gender", this.Gender);
+                        command.Parameters.AddWithValue("type", this.Type);
+                        command.Parameters.AddWithValue("@username", this.UserName);
+
+                        //Check how many rows effected
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            return true;
+                        } else
+                        {
+                            return false;
+                        }
+                    }
+
+                }catch (Exception e)
+                {
+                    MessageBox.Show("Exception : " + e);
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
         /// Method returns list of movies that matched with pattern
         /// </summary>
         /// <param name="movieRegex"></param>

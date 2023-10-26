@@ -146,6 +146,7 @@
             register_btn.TabIndex = 7;
             register_btn.Text = "Register";
             register_btn.UseVisualStyleBackColor = false;
+            register_btn.Click += register_btn_Click;
             // 
             // Form1
             // 
