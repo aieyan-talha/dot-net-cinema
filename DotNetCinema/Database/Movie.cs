@@ -1,8 +1,11 @@
-﻿using System;
+﻿using DotNetCinema.Utils;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DotNetCinema.Users.User;
 
 namespace DotNetCinema.Database
 {
@@ -33,10 +36,11 @@ namespace DotNetCinema.Database
             Description = string.Empty;
         }
 
-        public Movie(int id, string name, string genre, string img_path, int runtime, int priority, DateTime start_date, DateTime end_date, string description) 
+        public Movie(int id, string name, int length, string genre, string img_path, int runtime, int priority, DateTime start_date, DateTime end_date, string description) 
         {
             Id = id;
             Name = name;
+            Length = length;
             Genre = genre;
             Img_path = img_path;
             Runtime = runtime;
@@ -44,6 +48,57 @@ namespace DotNetCinema.Database
             Start_date = start_date;
             End_date = end_date;
             Description = description;
+        }
+
+        /// <summary>
+        /// Function to get a list of all the movies in database
+        /// </summary>
+        /// <returns></returns>
+        public static List<Movie> GetMoviesFromDB()
+        {
+            List<Movie> movies = new List<Movie>();
+
+            string connectionString = Common.connectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sqlQuery = "Select * FROM [dbo].[Movies]";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["id"]);
+                                string name = reader.GetString(reader.GetOrdinal("name"));
+                                int length = Convert.ToInt32(reader["length"]);
+                                string genre = reader.GetString(reader.GetOrdinal("genre"));
+                                string img_path = reader.GetString(reader.GetOrdinal("img_path"));
+                                int runtime = Convert.ToInt32(reader["runtime"]);
+                                int priority = Convert.ToInt32(reader["priority"]);
+                                DateTime start_date = reader.GetDateTime(reader.GetOrdinal("start_date"));
+                                DateTime end_date = reader.GetDateTime(reader.GetOrdinal("end_date"));
+                                string description = reader.GetString(reader.GetOrdinal("description"));
+
+                                Movie movie = new Movie(id, name, length, genre, img_path, runtime, priority, start_date, end_date, description);
+
+                                movies.Add(movie);
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: {0}", e.Message);
+                }
+            }
+            return movies;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DotNetCinema.Utils;
+﻿using DotNetCinema.Database;
+using DotNetCinema.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace DotNetCinema.Users
 {
@@ -114,6 +116,24 @@ namespace DotNetCinema.Users
                 }
             }
             return users;
+        }
+
+        /// <summary>
+        /// Method returns list of movies that matched with pattern
+        /// </summary>
+        /// <param name="movieRegex"></param>
+        /// <param name="movies"></param>
+        public static List<Movie> SearchMovie(string movieRegex, List<Movie> movies)
+        {
+            List<Movie> results = new List<Movie>();
+            foreach (Movie movie in movies)
+            {
+                if (Regex.IsMatch(movie.Name, movieRegex, RegexOptions.IgnoreCase))
+                {
+                    results.Add(movie);
+                }
+            }
+            return results;
         }
     }
 }

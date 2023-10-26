@@ -1,3 +1,4 @@
+using DotNetCinema.Database;
 using DotNetCinema.Users;
 
 namespace DotNetCinema
