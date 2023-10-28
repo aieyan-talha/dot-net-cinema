@@ -43,7 +43,6 @@
             label7 = new Label();
             label8 = new Label();
             pictureBox2 = new PictureBox();
-            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -66,20 +65,18 @@
             // 
             comboBox1.Anchor = AnchorStyles.None;
             comboBox1.BackColor = Color.Black;
-            comboBox1.Cursor = Cursors.Hand;
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "My Tickets", "My Watchlist", "My Points", "Sign Out" });
-            comboBox1.Location = new Point(674, 13);
-            comboBox1.Margin = new Padding(2);
+            comboBox1.Location = new Point(651, 13);
+            comboBox1.Margin = new Padding(2, 2, 2, 2);
             comboBox1.Name = "comboBox1";
             comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(131, 27);
+            comboBox1.Size = new Size(157, 27);
             comboBox1.TabIndex = 1;
             comboBox1.Text = "MY PAGE";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
@@ -90,7 +87,7 @@
             textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ButtonFace;
             textBox1.Location = new Point(167, 61);
-            textBox1.Margin = new Padding(2);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search";
             textBox1.Size = new Size(478, 26);
@@ -100,13 +97,12 @@
             // 
             button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.Black;
-            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.DarkRed;
             button1.Location = new Point(574, 61);
-            button1.Margin = new Padding(2);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
             button1.Size = new Size(71, 26);
             button1.TabIndex = 3;
@@ -131,7 +127,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Location = new Point(75, 138);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(109, 135);
             pictureBox1.TabIndex = 5;
@@ -173,13 +169,12 @@
             button2.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonFace;
             button2.Location = new Point(208, 245);
-            button2.Margin = new Padding(2);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
             button2.Size = new Size(70, 28);
             button2.TabIndex = 14;
             button2.Text = "BOOK";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // label4
             // 
@@ -220,7 +215,6 @@
             button3.TabIndex = 19;
             button3.Text = "BOOK";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // label7
             // 
@@ -256,25 +250,13 @@
             pictureBox2.TabIndex = 16;
             pictureBox2.TabStop = false;
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.DarkRed;
-            label9.Location = new Point(606, 21);
-            label9.Name = "label9";
-            label9.Size = new Size(63, 13);
-            label9.TabIndex = 21;
-            label9.Text = "2900 Points";
-            // 
-            // UserPage
+            // Form2
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 452);
-            Controls.Add(label9);
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(label7);
@@ -292,8 +274,8 @@
             Controls.Add(label1);
             Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.ButtonFace;
-            Margin = new Padding(2);
-            Name = "UserPage";
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "Form2";
             Text = "Dot Net Cinema";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -318,6 +300,5 @@
         private Label label7;
         private Label label8;
         private PictureBox pictureBox2;
-        private Label label9;
     }
 }
