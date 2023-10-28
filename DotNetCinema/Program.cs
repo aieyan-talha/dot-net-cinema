@@ -1,3 +1,6 @@
+using DotNetCinema.Database;
+using DotNetCinema.Utils;
+using DotNetCinema.Users;
 namespace DotNetCinema
 {
     internal static class Program
