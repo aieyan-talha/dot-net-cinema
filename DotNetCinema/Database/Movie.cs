@@ -101,6 +101,50 @@ namespace DotNetCinema.Database
             return movies;
         }
 
+        public static Movie GetMovieFromDB(int id)
+        {
+            string connectionString = Common.connectionString;
+            Movie movie = new Movie();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sqlQuery = "Select * FROM [dbo].[Movies] WHERE id = @Id";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string name = reader.GetString(reader.GetOrdinal("name"));
+                                int length = Convert.ToInt32(reader["length"]);
+                                string genre = reader.GetString(reader.GetOrdinal("genre"));
+                                string img_path = reader.GetString(reader.GetOrdinal("img_path"));
+                                int runtime = Convert.ToInt32(reader["runtime"]);
+                                int priority = Convert.ToInt32(reader["priority"]);
+                                DateTime start_date = reader.GetDateTime(reader.GetOrdinal("start_date"));
+                                DateTime end_date = reader.GetDateTime(reader.GetOrdinal("end_date"));
+                                string description = reader.GetString(reader.GetOrdinal("description"));
+
+                                movie = new Movie(id, name, length, genre, img_path, runtime, priority, start_date, end_date, description);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: {0}", e.Message);
+                }
+                return movie;
+            }
+        }
+
         public static List<Movie> GetActiveMovies()
         {
             List<Movie> movies = new List<Movie>();
@@ -113,8 +157,8 @@ namespace DotNetCinema.Database
                 {
                     connection.Open();
 
-                    string sqlQuery = "SELECT * FROM movies" +
-                        "WHERE start_date >= CAST(GETDATE() AS DATE)" +
+                    string sqlQuery = "SELECT * FROM movies " +
+                        "WHERE start_date <= CAST(GETDATE() AS DATE) " +
                         "AND end_date >= CAST(GETDATE() AS DATE);";
 
                     using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))

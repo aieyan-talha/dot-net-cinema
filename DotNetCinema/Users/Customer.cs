@@ -28,6 +28,79 @@ namespace DotNetCinema.Users
             this.userId = userId;
         }
 
+        public static Customer GetCustomerFromDB(int id)
+        {
+            int user_id = 0;
+            string connectionString = Common.connectionString;
+            Customer customer = new Customer();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sqlQuery = "Select * FROM [dbo].[Customers] WHERE id = @Id";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                user_id = Convert.ToInt32(reader["user_id"]);
+                            }
+                        }
+                    }
+
+                    sqlQuery = "Select * FROM [dbo].[Users] WHERE id = @Id";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", user_id);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string firstName = reader.GetString(reader.GetOrdinal("first_name"));
+                                string lastName = reader.GetString(reader.GetOrdinal("last_name"));
+                                string email = reader.GetString(reader.GetOrdinal("email"));
+                                string phone = reader.GetString(reader.GetOrdinal("phone"));
+                                string password = reader.GetString(reader.GetOrdinal("password"));
+                                string userName = reader.GetString(reader.GetOrdinal("username"));
+                                DateTime DOB = reader.GetDateTime(reader.GetOrdinal("DOB"));
+                                string gender = reader.GetString(reader.GetOrdinal("gender"));
+                                string type = reader.GetString(reader.GetOrdinal("type"));
+
+                                UserType userType = UserType.Customer;
+
+                                try
+                                {
+                                    // Convert string type to UserType enum. The true part takes care of case-insensitive input
+                                    userType = (UserType)Enum.Parse(typeof(UserType), type, true);
+                                }
+                                catch (ArgumentException)
+                                {
+                                    Console.WriteLine("Invalid input string");
+                                }
+
+                                customer = new Customer(user_id, 0, firstName, lastName, email, phone, password, userName, DOB, gender, userType);
+
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: {0}", e.Message);
+                }
+            }
+            return customer;
+        }
+
         /// <summary>
         /// Method to edit own account
         /// </summary>

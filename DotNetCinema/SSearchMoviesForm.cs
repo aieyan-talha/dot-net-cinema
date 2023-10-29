@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DotNetCinema.Database;
+using DotNetCinema.Users;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace DotNetCinema
         public SSearchMoviesForm()
         {
             InitializeComponent();
+            this.Controls.Add(dataGridView1);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +46,22 @@ namespace DotNetCinema
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string regexMovie = textBox1.Text;
+            PopulateMovies(regexMovie, dataGridView1);
+        }
+
+        private static void PopulateMovies(string regexMovie, DataGridView viewMovies)
+        {
+            List<Movie> movies = Movie.GetMoviesFromDB();
+
+            foreach (Movie movie in Employee.SearchMovie(regexMovie, movies))
+            {
+                viewMovies.Rows.Add(movie.Name, movie.Genre, movie.Start_date, movie.End_date);
+            }
         }
     }
 }

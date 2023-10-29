@@ -58,22 +58,23 @@ namespace DotNetCinema
             // Check the selected item and show the corresponding form
             switch (selectedItem)
             {
-                case "My Tickets":
-                    formToOpen = new MyTicketsForm();
+
+                case "List of Movies":
+
+                    formToOpen = new SListMoviesForm();
+
                     break;
 
-                case "My Watchlist":
-                    formToOpen = new MyWatchForm();
+                case "Search Movies":
+
+                    formToOpen = new SSearchMoviesForm();
+
                     break;
 
-                case "My Points":
-                    formToOpen = new MyPointsForm();
-                    break;
+                case "List of Tickets of a Movie":
 
-                case "Sign Out":
-                    Form1 form1 = new Form1();
-                    form1.Show();
-                    this.Close();
+                    formToOpen = new SListTicketsForm();
+
                     break;
             }
 
@@ -84,6 +85,9 @@ namespace DotNetCinema
             }
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

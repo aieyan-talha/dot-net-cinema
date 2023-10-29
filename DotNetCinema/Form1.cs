@@ -32,9 +32,6 @@ namespace DotNetCinema
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            AdminPage adminPage = new AdminPage();
-            adminPage.Show();
-            this.Hide();
 
             string username = login_username.Text;
             string password = login_password.Text;
@@ -63,6 +60,10 @@ namespace DotNetCinema
                 else if (user.Type == User.UserType.Manager)
                 {
                     //Go to manager page
+                    StaffPage staffPage = new StaffPage();
+
+                    this.Hide();
+                    staffPage.Show();
                 }
 
                 invalid_login_label.Text = string.Empty;
