@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetCinema.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace DotNetCinema
         public SListTicketsForm()
         {
             InitializeComponent();
+            this.Controls.Add(dataGridView1);
+            PopulateMovieBox(comboBox1);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,6 +48,43 @@ namespace DotNetCinema
             this.Close();
         }
 
+        private static void PopulateMovieBox(ComboBox movieComboBox)
+        {
+            List<Movie> movies = Movie.GetActiveMovies();
 
+            foreach (Movie movie in movies)
+            {
+                movieComboBox.Items.Add(movie.Name);
+            }
+        }
+
+        private static void PopulateTicket(DataGridView viewTickets, Movie movie)
+        {
+            List<Ticket> tickets = Ticket.GetTicketsFromDB();
+
+            foreach (Ticket ticket in tickets)
+            {
+                if (ticket.Movie.Id == movie.Id)
+                {
+                    string name = ticket.Customer.FirstName + " " + ticket.Customer.LastName;
+                    viewTickets.Rows.Add(name, ticket.Movie.Name, ticket.Timetable.Date);
+
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = comboBox1.SelectedItem.ToString();
+
+            List<Movie> movies = Movie.GetActiveMovies();
+            foreach (Movie movie in movies)
+            {
+                if (movie.Name == selectedItem)
+                {
+                    PopulateTicket(dataGridView1, movie);
+                }
+            }
+        }
     }
 }

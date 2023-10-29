@@ -58,9 +58,6 @@
     <Compile Update="SListTicketsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SSearchTicketsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="SSearchMoviesForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
-            label8 = new Label();
             button1 = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            label3 = new Label();
-            label4 = new Label();
-            label7 = new Label();
-            label9 = new Label();
-            button2 = new Button();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -46,7 +48,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkRed;
-            label1.Location = new Point(21, 18);
+            label1.Location = new Point(20, 17);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(195, 28);
@@ -60,25 +62,13 @@
             label2.AutoSize = true;
             label2.Font = new Font("Corbel", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(332, 69);
+            label2.Location = new Point(331, 68);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(136, 26);
             label2.TabIndex = 4;
             label2.Text = "List of Movies";
             label2.Click += label2_Click;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(135, 115);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(52, 19);
-            label8.TabIndex = 17;
-            label8.Text = "Movie";
             // 
             // button1
             // 
@@ -89,7 +79,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(52, 402);
+            button1.Location = new Point(351, 667);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(105, 28);
@@ -98,86 +88,65 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // tableLayoutPanel1
+            // dataGridView1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.None;
-            tableLayoutPanel1.ColumnCount = 5;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 56.8584061F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.1415939F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 178F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 170F));
-            tableLayoutPanel1.Location = new Point(41, 137);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(745, 34);
-            tableLayoutPanel1.TabIndex = 28;
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.FromArgb(44, 44, 44);
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(44, 44, 44);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(44, 44, 44);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.GridColor = SystemColors.ControlDarkDark;
+            dataGridView1.Location = new Point(36, 156);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(44, 44, 44);
+            dataGridViewCellStyle3.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(728, 436);
+            dataGridView1.TabIndex = 34;
             // 
-            // label3
+            // Column1
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(332, 115);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 19);
-            label3.TabIndex = 29;
-            label3.Text = "GENRE";
+            Column1.HeaderText = "Title";
+            Column1.Name = "Column1";
             // 
-            // label4
+            // Column2
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(502, 115);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(51, 19);
-            label4.TabIndex = 30;
-            label4.Text = "START";
+            Column2.HeaderText = "Genre";
+            Column2.Name = "Column2";
             // 
-            // label7
+            // Column3
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(688, 115);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 19);
-            label7.TabIndex = 31;
-            label7.Text = "END";
+            Column3.HeaderText = "Startdate";
+            Column3.Name = "Column3";
             // 
-            // label9
+            // Column4
             // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(640, 26);
-            label9.Name = "label9";
-            label9.Size = new Size(61, 18);
-            label9.TabIndex = 33;
-            label9.Text = "Hi, Staff!";
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.FromArgb(44, 44, 44);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = SystemColors.ButtonFace;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(730, 20);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(70, 28);
-            button2.TabIndex = 32;
-            button2.Text = "Sign Out";
-            button2.UseVisualStyleBackColor = false;
+            Column4.HeaderText = "Enddate";
+            Column4.Name = "Column4";
             // 
             // SListMoviesForm
             // 
@@ -185,15 +154,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
-            ClientSize = new Size(816, 452);
-            Controls.Add(label9);
-            Controls.Add(button2);
-            Controls.Add(label7);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(816, 788);
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Controls.Add(label8);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -201,6 +164,8 @@
             Margin = new Padding(2);
             Name = "SListMoviesForm";
             Text = "DOT NET CINEMA Staff - List of Movies";
+            Load += SListMoviesForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,13 +174,11 @@
 
         private Label label1;
         private Label label2;
-        private Label label8;
         private Button button1;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Label label3;
-        private Label label4;
-        private Label label7;
-        private Label label9;
-        private Button button2;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
     }
 }

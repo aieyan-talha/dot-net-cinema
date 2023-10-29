@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetCinema.Users;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace DotNetCinema
         public AListStaffForm()
         {
             InitializeComponent();
+            PopulateStaff(dataGridView1);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,5 +46,17 @@ namespace DotNetCinema
         {
             this.Close();
         }
+
+        private static void PopulateStaff(DataGridView staffListGridView)
+        {
+            List<User> staff = Employee.ListUserType(User.GetUsersFromDB(), "Manager");
+
+            foreach (User user in staff)
+            {
+                string name = user.FirstName + " " + user.LastName;
+                staffListGridView.Rows.Add(name, user.Email, user.Phone, user.DOB);
+            }
+        }
+
     }
 }
