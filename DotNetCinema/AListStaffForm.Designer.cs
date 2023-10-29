@@ -36,8 +36,6 @@
             label3 = new Label();
             label4 = new Label();
             label7 = new Label();
-            label9 = new Label();
-            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -150,35 +148,6 @@
             label7.TabIndex = 31;
             label7.Text = "Name";
             // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(639, 33);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 18);
-            label9.TabIndex = 33;
-            label9.Text = "Hi, Admin!";
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.FromArgb(44, 44, 44);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = SystemColors.ButtonFace;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(729, 27);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(70, 28);
-            button2.TabIndex = 32;
-            button2.Text = "Sign Out";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // AListStaffForm
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -186,8 +155,6 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 632);
-            Controls.Add(label9);
-            Controls.Add(button2);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -215,7 +182,5 @@
         private Label label3;
         private Label label4;
         private Label label7;
-        private Label label9;
-        private Button button2;
     }
 }

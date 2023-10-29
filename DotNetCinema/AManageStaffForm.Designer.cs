@@ -31,8 +31,6 @@
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
-            label9 = new Label();
-            button2 = new Button();
             button3 = new Button();
             username_error = new Label();
             password_error = new Label();
@@ -100,35 +98,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(639, 51);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 18);
-            label9.TabIndex = 33;
-            label9.Text = "Hi, Admin!";
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.FromArgb(44, 44, 44);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = SystemColors.ButtonFace;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(729, 45);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(70, 28);
-            button2.TabIndex = 32;
-            button2.Text = "Sign Out";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
@@ -146,6 +115,7 @@
             button3.TabIndex = 36;
             button3.Text = "ADD";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // username_error
             // 
@@ -360,6 +330,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.None;
             comboBox1.BackColor = SystemColors.ControlDarkDark;
             comboBox1.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
@@ -395,8 +366,6 @@
             Controls.Add(email_label);
             Controls.Add(register_email);
             Controls.Add(button3);
-            Controls.Add(label9);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -414,8 +383,6 @@
         private Label label1;
         private Label label2;
         private Button button1;
-        private Label label9;
-        private Button button2;
         private Button button3;
         private Label username_error;
         private Label password_error;

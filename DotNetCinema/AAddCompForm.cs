@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DotNetCinema
 {
-    public partial class AManageStaffForm : Form
+    public partial class AAddCompForm : Form
     {
-        public AManageStaffForm()
+        public AAddCompForm()
         {
             InitializeComponent();
         }
@@ -42,14 +42,6 @@ namespace DotNetCinema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            // Show Completion Message Form
-            AAddCompForm addccompform = new AAddCompForm();
-            addccompform.Show();
             this.Close();
         }
     }

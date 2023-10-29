@@ -32,6 +32,10 @@ namespace DotNetCinema
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+            AdminPage adminPage = new AdminPage();
+            adminPage.Show();
+            this.Hide();
+
             string username = login_username.Text;
             string password = login_password.Text;
 
