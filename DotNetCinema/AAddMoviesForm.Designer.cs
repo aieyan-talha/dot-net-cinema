@@ -30,32 +30,30 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label8 = new Label();
             button1 = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            label7 = new Label();
             label9 = new Label();
             button2 = new Button();
             button3 = new Button();
-            label5 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            label12 = new Label();
-            textBox5 = new TextBox();
-            label6 = new Label();
-            tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
+            username_error = new Label();
+            password_error = new Label();
+            email_address_error = new Label();
+            username_label = new Label();
+            register_username = new TextBox();
+            mobile = new Label();
+            register_mobile = new TextBox();
+            lastname = new Label();
+            firstname = new Label();
+            register_firstname = new TextBox();
+            password_label = new Label();
+            register_password = new TextBox();
+            email_label = new Label();
+            register_email = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            register_dob = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            numericUpDown1 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -64,7 +62,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkRed;
-            label1.Location = new Point(21, 18);
+            label1.Location = new Point(11, 41);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(195, 28);
@@ -78,25 +76,13 @@
             label2.AutoSize = true;
             label2.Font = new Font("Corbel", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(333, 72);
+            label2.Location = new Point(331, 95);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(118, 26);
             label2.TabIndex = 4;
             label2.Text = "Add Movies";
             label2.Click += label2_Click;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(269, 149);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(56, 19);
-            label8.TabIndex = 17;
-            label8.Text = "Length";
             // 
             // button1
             // 
@@ -107,7 +93,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(52, 402);
+            button1.Location = new Point(50, 779);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(105, 28);
@@ -116,108 +102,13 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.None;
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 165F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.5425529F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.4574471F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 178F));
-            tableLayoutPanel1.Controls.Add(textBox4, 3, 0);
-            tableLayoutPanel1.Controls.Add(textBox3, 2, 0);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox1, 0, 0);
-            tableLayoutPanel1.Location = new Point(39, 171);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(745, 34);
-            tableLayoutPanel1.TabIndex = 28;
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(572, 4);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Card Holder's Name";
-            textBox4.Size = new Size(167, 26);
-            textBox4.TabIndex = 40;
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(375, 4);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Card Holder's Name";
-            textBox3.Size = new Size(167, 26);
-            textBox3.TabIndex = 39;
-            // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(175, 4);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Card Holder's Name";
-            textBox2.Size = new Size(167, 26);
-            textBox2.TabIndex = 38;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Card Holder's Name";
-            textBox1.Size = new Size(159, 26);
-            textBox1.TabIndex = 37;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(466, 149);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 19);
-            label3.TabIndex = 29;
-            label3.Text = "Genre";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(667, 149);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 19);
-            label4.TabIndex = 30;
-            label4.Text = "Image";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(77, 153);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(96, 19);
-            label7.TabIndex = 31;
-            label7.Text = "Movie Name";
-            // 
             // label9
             // 
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(640, 26);
+            label9.Location = new Point(630, 49);
             label9.Name = "label9";
             label9.Size = new Size(72, 18);
             label9.TabIndex = 33;
@@ -232,7 +123,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(730, 20);
+            button2.Location = new Point(720, 43);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(70, 28);
@@ -250,7 +141,7 @@
             button3.FlatStyle = FlatStyle.System;
             button3.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(666, 400);
+            button3.Location = new Point(662, 779);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(111, 28);
@@ -258,134 +149,241 @@
             button3.Text = "ADD";
             button3.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // username_error
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(77, 230);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(79, 19);
-            label5.TabIndex = 44;
-            label5.Text = "Run Times";
+            username_error.AutoSize = true;
+            username_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            username_error.ForeColor = Color.Red;
+            username_error.Location = new Point(205, 361);
+            username_error.Name = "username_error";
+            username_error.Size = new Size(0, 17);
+            username_error.TabIndex = 51;
             // 
-            // label10
+            // password_error
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(667, 230);
-            label10.Margin = new Padding(2, 0, 2, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(71, 19);
-            label10.TabIndex = 43;
-            label10.Text = "End Date";
+            password_error.AutoSize = true;
+            password_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            password_error.ForeColor = Color.Red;
+            password_error.Location = new Point(205, 284);
+            password_error.Name = "password_error";
+            password_error.Size = new Size(0, 17);
+            password_error.TabIndex = 50;
             // 
-            // label11
+            // email_address_error
             // 
-            label11.Anchor = AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(457, 230);
-            label11.Margin = new Padding(2, 0, 2, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(79, 19);
-            label11.TabIndex = 42;
-            label11.Text = "Start Date";
+            email_address_error.AutoSize = true;
+            email_address_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            email_address_error.ForeColor = Color.Red;
+            email_address_error.Location = new Point(205, 213);
+            email_address_error.Name = "email_address_error";
+            email_address_error.Size = new Size(0, 17);
+            email_address_error.TabIndex = 49;
             // 
-            // tableLayoutPanel2
+            // username_label
             // 
-            tableLayoutPanel2.Anchor = AnchorStyles.None;
-            tableLayoutPanel2.ColumnCount = 4;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 165F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.5425529F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.4574471F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 178F));
-            tableLayoutPanel2.Controls.Add(textBox6, 3, 0);
-            tableLayoutPanel2.Controls.Add(textBox7, 2, 0);
-            tableLayoutPanel2.Controls.Add(textBox8, 1, 0);
-            tableLayoutPanel2.Controls.Add(textBox9, 0, 0);
-            tableLayoutPanel2.Location = new Point(39, 252);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 1;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(745, 34);
-            tableLayoutPanel2.TabIndex = 41;
+            username_label.Anchor = AnchorStyles.None;
+            username_label.AutoSize = true;
+            username_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            username_label.ForeColor = Color.WhiteSmoke;
+            username_label.Location = new Point(205, 311);
+            username_label.Name = "username_label";
+            username_label.Size = new Size(48, 19);
+            username_label.TabIndex = 48;
+            username_label.Text = "Genre";
             // 
-            // textBox6
+            // register_username
             // 
-            textBox6.Anchor = AnchorStyles.None;
-            textBox6.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(572, 4);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Card Holder's Name";
-            textBox6.Size = new Size(167, 26);
-            textBox6.TabIndex = 40;
+            register_username.Anchor = AnchorStyles.None;
+            register_username.BackColor = SystemColors.ControlDarkDark;
+            register_username.BorderStyle = BorderStyle.FixedSingle;
+            register_username.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_username.ForeColor = Color.WhiteSmoke;
+            register_username.Location = new Point(205, 331);
+            register_username.Margin = new Padding(3, 2, 3, 2);
+            register_username.Name = "register_username";
+            register_username.PlaceholderText = "Username";
+            register_username.Size = new Size(398, 30);
+            register_username.TabIndex = 47;
             // 
-            // textBox7
+            // mobile
             // 
-            textBox7.Anchor = AnchorStyles.None;
-            textBox7.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(375, 4);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Card Holder's Name";
-            textBox7.Size = new Size(167, 26);
-            textBox7.TabIndex = 39;
+            mobile.Anchor = AnchorStyles.None;
+            mobile.AutoSize = true;
+            mobile.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            mobile.ForeColor = Color.WhiteSmoke;
+            mobile.Location = new Point(205, 521);
+            mobile.Name = "mobile";
+            mobile.Size = new Size(74, 19);
+            mobile.TabIndex = 46;
+            mobile.Text = "Start Date";
             // 
-            // textBox8
+            // register_mobile
             // 
-            textBox8.Anchor = AnchorStyles.None;
-            textBox8.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.Location = new Point(175, 4);
-            textBox8.Name = "textBox8";
-            textBox8.PlaceholderText = "Card Holder's Name";
-            textBox8.Size = new Size(167, 26);
-            textBox8.TabIndex = 38;
+            register_mobile.Anchor = AnchorStyles.None;
+            register_mobile.BackColor = SystemColors.ControlDarkDark;
+            register_mobile.BorderStyle = BorderStyle.FixedSingle;
+            register_mobile.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_mobile.ForeColor = Color.WhiteSmoke;
+            register_mobile.Location = new Point(205, 679);
+            register_mobile.Margin = new Padding(3, 2, 3, 2);
+            register_mobile.Name = "register_mobile";
+            register_mobile.PlaceholderText = "Mobile";
+            register_mobile.Size = new Size(398, 30);
+            register_mobile.TabIndex = 45;
             // 
-            // textBox9
+            // lastname
             // 
-            textBox9.Anchor = AnchorStyles.None;
-            textBox9.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox9.Location = new Point(3, 4);
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Card Holder's Name";
-            textBox9.Size = new Size(159, 26);
-            textBox9.TabIndex = 37;
+            lastname.Anchor = AnchorStyles.None;
+            lastname.AutoSize = true;
+            lastname.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lastname.ForeColor = Color.WhiteSmoke;
+            lastname.Location = new Point(205, 453);
+            lastname.Name = "lastname";
+            lastname.Size = new Size(55, 19);
+            lastname.TabIndex = 44;
+            lastname.Text = "Priority";
             // 
-            // label12
+            // firstname
             // 
-            label12.Anchor = AnchorStyles.None;
-            label12.AutoSize = true;
-            label12.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(269, 230);
-            label12.Margin = new Padding(2, 0, 2, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(61, 19);
-            label12.TabIndex = 40;
-            label12.Text = "Priority";
+            firstname.Anchor = AnchorStyles.None;
+            firstname.AutoSize = true;
+            firstname.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            firstname.ForeColor = Color.WhiteSmoke;
+            firstname.Location = new Point(205, 385);
+            firstname.Name = "firstname";
+            firstname.Size = new Size(79, 19);
+            firstname.TabIndex = 42;
+            firstname.Text = "Image Link";
             // 
-            // textBox5
+            // register_firstname
             // 
-            textBox5.Anchor = AnchorStyles.None;
-            textBox5.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(42, 332);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Card Holder's Name";
-            textBox5.Size = new Size(736, 26);
-            textBox5.TabIndex = 45;
+            register_firstname.Anchor = AnchorStyles.None;
+            register_firstname.BackColor = SystemColors.ControlDarkDark;
+            register_firstname.BorderStyle = BorderStyle.FixedSingle;
+            register_firstname.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_firstname.ForeColor = Color.WhiteSmoke;
+            register_firstname.Location = new Point(205, 405);
+            register_firstname.Margin = new Padding(3, 2, 3, 2);
+            register_firstname.Name = "register_firstname";
+            register_firstname.PlaceholderText = "First name";
+            register_firstname.Size = new Size(398, 30);
+            register_firstname.TabIndex = 41;
             // 
-            // label6
+            // password_label
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(76, 306);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(86, 19);
-            label6.TabIndex = 46;
-            label6.Text = "Description";
+            password_label.Anchor = AnchorStyles.None;
+            password_label.AutoSize = true;
+            password_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            password_label.ForeColor = Color.WhiteSmoke;
+            password_label.Location = new Point(205, 235);
+            password_label.Name = "password_label";
+            password_label.Size = new Size(53, 19);
+            password_label.TabIndex = 40;
+            password_label.Text = "Length";
+            // 
+            // register_password
+            // 
+            register_password.Anchor = AnchorStyles.None;
+            register_password.BackColor = SystemColors.ControlDarkDark;
+            register_password.BorderStyle = BorderStyle.FixedSingle;
+            register_password.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_password.ForeColor = Color.WhiteSmoke;
+            register_password.Location = new Point(205, 255);
+            register_password.Margin = new Padding(3, 2, 3, 2);
+            register_password.Name = "register_password";
+            register_password.PlaceholderText = "Password";
+            register_password.Size = new Size(398, 30);
+            register_password.TabIndex = 39;
+            register_password.UseSystemPasswordChar = true;
+            // 
+            // email_label
+            // 
+            email_label.Anchor = AnchorStyles.None;
+            email_label.AutoSize = true;
+            email_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            email_label.ForeColor = Color.WhiteSmoke;
+            email_label.Location = new Point(205, 163);
+            email_label.Name = "email_label";
+            email_label.Size = new Size(91, 19);
+            email_label.TabIndex = 38;
+            email_label.Text = "Movie Name";
+            // 
+            // register_email
+            // 
+            register_email.Anchor = AnchorStyles.None;
+            register_email.BackColor = SystemColors.ControlDarkDark;
+            register_email.BorderStyle = BorderStyle.FixedSingle;
+            register_email.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_email.ForeColor = Color.WhiteSmoke;
+            register_email.Location = new Point(205, 183);
+            register_email.Margin = new Padding(3, 2, 3, 2);
+            register_email.Name = "register_email";
+            register_email.PlaceholderText = "Email address";
+            register_email.Size = new Size(398, 30);
+            register_email.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Location = new Point(204, 658);
+            label3.Name = "label3";
+            label3.Size = new Size(83, 19);
+            label3.TabIndex = 55;
+            label3.Text = "Description";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.WhiteSmoke;
+            label4.Location = new Point(204, 590);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 19);
+            label4.TabIndex = 53;
+            label4.Text = "End Date";
+            // 
+            // register_dob
+            // 
+            register_dob.AllowDrop = true;
+            register_dob.Anchor = AnchorStyles.None;
+            register_dob.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            register_dob.CalendarMonthBackground = SystemColors.ControlDarkDark;
+            register_dob.CalendarTitleBackColor = SystemColors.ControlDarkDark;
+            register_dob.CalendarTrailingForeColor = Color.Gray;
+            register_dob.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            register_dob.Format = DateTimePickerFormat.Short;
+            register_dob.Location = new Point(204, 612);
+            register_dob.Margin = new Padding(3, 2, 3, 2);
+            register_dob.Name = "register_dob";
+            register_dob.Size = new Size(399, 30);
+            register_dob.TabIndex = 56;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.AllowDrop = true;
+            dateTimePicker1.Anchor = AnchorStyles.None;
+            dateTimePicker1.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.CalendarMonthBackground = SystemColors.ControlDarkDark;
+            dateTimePicker1.CalendarTitleBackColor = SystemColors.ControlDarkDark;
+            dateTimePicker1.CalendarTrailingForeColor = Color.Gray;
+            dateTimePicker1.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(204, 542);
+            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(399, 30);
+            dateTimePicker1.TabIndex = 57;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(205, 484);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(398, 20);
+            numericUpDown1.TabIndex = 58;
             // 
             // AAddMoviesForm
             // 
@@ -393,23 +391,30 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
-            ClientSize = new Size(816, 452);
-            Controls.Add(textBox5);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label10);
-            Controls.Add(label11);
-            Controls.Add(tableLayoutPanel2);
-            Controls.Add(label12);
+            ClientSize = new Size(816, 854);
+            Controls.Add(numericUpDown1);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(register_dob);
+            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(username_error);
+            Controls.Add(password_error);
+            Controls.Add(email_address_error);
+            Controls.Add(username_label);
+            Controls.Add(register_username);
+            Controls.Add(mobile);
+            Controls.Add(register_mobile);
+            Controls.Add(lastname);
+            Controls.Add(firstname);
+            Controls.Add(register_firstname);
+            Controls.Add(password_label);
+            Controls.Add(register_password);
+            Controls.Add(email_label);
+            Controls.Add(register_email);
             Controls.Add(button3);
             Controls.Add(label9);
             Controls.Add(button2);
-            Controls.Add(label7);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(button1);
-            Controls.Add(label8);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -417,10 +422,7 @@
             Margin = new Padding(2);
             Name = "AAddMoviesForm";
             Text = "DOT NET CINEMA Admin - Add Movies";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -429,29 +431,28 @@
 
         private Label label1;
         private Label label2;
-        private Label label8;
         private Button button1;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Label label3;
-        private Label label4;
-        private Label label7;
         private Label label9;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox2;
         private Button button3;
-        private TextBox textBox4;
-        private Label label5;
-        private Label label10;
-        private Label label11;
-        private TableLayoutPanel tableLayoutPanel2;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private Label label12;
-        private TextBox textBox5;
-        private Label label6;
+        private Label username_error;
+        private Label password_error;
+        private Label email_address_error;
+        private Label username_label;
+        private TextBox register_username;
+        private Label mobile;
+        private TextBox register_mobile;
+        private Label lastname;
+        private Label firstname;
+        private TextBox register_firstname;
+        private Label password_label;
+        private TextBox register_password;
+        private Label email_label;
+        private TextBox register_email;
+        private Label label3;
+        private Label label4;
+        private DateTimePicker register_dob;
+        private DateTimePicker dateTimePicker1;
+        private NumericUpDown numericUpDown1;
     }
 }

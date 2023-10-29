@@ -56,15 +56,15 @@
             comboBox1.BackColor = Color.Black;
             comboBox1.Cursor = Cursors.Hand;
             comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.Font = new Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "List of Staff", "Manage Staff Account", "Search Staff", "Add Movies" });
-            comboBox1.Location = new Point(227, 221);
+            comboBox1.Items.AddRange(new object[] { "List of Staff", "Add Staff Account" });
+            comboBox1.Location = new Point(210, 221);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
             comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(363, 27);
+            comboBox1.Size = new Size(429, 34);
             comboBox1.TabIndex = 1;
             comboBox1.Text = "Select Your Task";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -85,12 +85,13 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Font = new Font("Calibri Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.AppWorkspace;
-            label5.Location = new Point(279, 187);
+            label5.Location = new Point(256, 186);
             label5.Name = "label5";
-            label5.Size = new Size(242, 15);
+            label5.Size = new Size(304, 19);
             label5.TabIndex = 20;
             label5.Text = "Welcome. Select a required task from the list.";
             // 
