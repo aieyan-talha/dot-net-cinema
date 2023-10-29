@@ -33,14 +33,15 @@
             label3 = new Label();
             label5 = new Label();
             button3 = new Button();
-            label8 = new Label();
+            movie_name = new Label();
             label4 = new Label();
             label6 = new Label();
             label9 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            available_dates = new ComboBox();
+            available_times = new ComboBox();
+            nPeople = new ComboBox();
             button1 = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             SuspendLayout();
             // 
             // label1
@@ -114,17 +115,17 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // label8
+            // movie_name
             // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(369, 171);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(116, 19);
-            label8.TabIndex = 17;
-            label8.Text = "NAME of movie";
+            movie_name.Anchor = AnchorStyles.None;
+            movie_name.AutoSize = true;
+            movie_name.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            movie_name.Location = new Point(369, 171);
+            movie_name.Margin = new Padding(2, 0, 2, 0);
+            movie_name.Name = "movie_name";
+            movie_name.Size = new Size(116, 19);
+            movie_name.TabIndex = 17;
+            movie_name.Text = "NAME of movie";
             // 
             // label4
             // 
@@ -165,34 +166,37 @@
             label9.TabIndex = 23;
             label9.Text = "Select People:";
             // 
-            // comboBox1
+            // available_dates
             // 
-            comboBox1.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(369, 211);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(188, 23);
-            comboBox1.TabIndex = 24;
+            available_dates.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            available_dates.FormattingEnabled = true;
+            available_dates.Location = new Point(369, 211);
+            available_dates.Name = "available_dates";
+            available_dates.Size = new Size(188, 23);
+            available_dates.TabIndex = 24;
+            available_dates.SelectedIndexChanged += available_dates_SelectedIndexChanged;
             // 
-            // comboBox2
+            // available_times
             // 
-            comboBox2.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(369, 261);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(188, 23);
-            comboBox2.TabIndex = 25;
+            available_times.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            available_times.FormattingEnabled = true;
+            available_times.Location = new Point(369, 261);
+            available_times.Name = "available_times";
+            available_times.Size = new Size(188, 23);
+            available_times.TabIndex = 25;
+            available_times.SelectedIndexChanged += available_times_SelectedIndexChanged;
             // 
-            // comboBox3
+            // nPeople
             // 
-            comboBox3.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox3.Location = new Point(369, 311);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(40, 23);
-            comboBox3.TabIndex = 26;
-            comboBox3.Text = "0";
+            nPeople.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            nPeople.FormattingEnabled = true;
+            nPeople.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            nPeople.Location = new Point(369, 311);
+            nPeople.Name = "nPeople";
+            nPeople.Size = new Size(40, 23);
+            nPeople.TabIndex = 26;
+            nPeople.Text = "0";
+            nPeople.SelectedIndexChanged += nPeople_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -220,15 +224,15 @@
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 452);
             Controls.Add(button1);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(nPeople);
+            Controls.Add(available_times);
+            Controls.Add(available_dates);
             Controls.Add(label9);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(button3);
-            Controls.Add(label8);
+            Controls.Add(movie_name);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -248,13 +252,14 @@
         private Label label3;
         private Label label5;
         private Button button3;
-        private Label label8;
+        private Label movie_name;
         private Label label4;
         private Label label6;
         private Label label9;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox available_dates;
+        private ComboBox available_times;
+        private ComboBox nPeople;
         private Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

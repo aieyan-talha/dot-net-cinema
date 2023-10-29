@@ -171,5 +171,14 @@ namespace DotNetCinema.Database
 
             return moviesOfTheDay;
         }
+
+        public static Movie GetMoviesById (int id)
+        {
+            List<Movie> movies = GetMoviesFromDB();
+
+            Movie requestedMovie = movies.Where(m => m.Id == id).First();
+
+            return requestedMovie;
+        }
     }
 }

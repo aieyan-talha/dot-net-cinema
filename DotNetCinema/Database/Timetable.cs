@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using static DotNetCinema.Users.User;
 
 namespace DotNetCinema.Database
 {
@@ -132,13 +133,12 @@ namespace DotNetCinema.Database
 
                     foreach (Timetable timeslot in timeslots)
                     {
-                        string query = "INSERT INTO [dbo].[Timetable] (id, movie_id, capacity, date, start_time, end_time) " +
-                           "VALUES (@Id, @MovieId, @Capacity, @Date, @StartTime, @EndTime)";
+                        string query = "INSERT INTO [dbo].[Timetable] ( movie_id, capacity, date, start_time, end_time) " +
+                           "VALUES ( @MovieId, @Capacity, @Date, @StartTime, @EndTime)";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             // Assuming 'timetable' object properties correspond to the table columns
-                            command.Parameters.AddWithValue("@Id", timeslot.Id);
                             command.Parameters.AddWithValue("@MovieId", timeslot.Movie.Id); // Assuming Movie has an 'Id' property
                             command.Parameters.AddWithValue("@Capacity", timeslot.Capacity);
                             command.Parameters.AddWithValue("@Date", timeslot.Date);
@@ -146,16 +146,7 @@ namespace DotNetCinema.Database
                             command.Parameters.AddWithValue("@EndTime", timeslot.End_time);
 
                             //Check how many rows effected
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                return true;
-                            }
-                            else
-                            {
-                                return false;
-                            }
+                            command.ExecuteNonQuery();
                         }
                     }
 
@@ -177,6 +168,80 @@ namespace DotNetCinema.Database
                     }
                 }
             }
+        }
+
+        public static List<Timetable> GetAllAvailableTimeSlots()
+        {
+            List<Timetable> timetable = new List<Timetable>();
+
+            string connectionString = Common.connectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT [id], [movie_id], [capacity], [date], [start_time], [end_time] " +
+                           "FROM [dbo].[Timetable] " +
+                           "WHERE [date] >= @Today";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Today", DateTime.Today);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["Id"]);
+                                int movieId = Convert.ToInt32(reader["movie_id"]);
+                                int capacity = Convert.ToInt32(reader["capacity"]);
+                                DateTime date = reader.GetDateTime(reader.GetOrdinal("date"));
+                                DateTime startTime = reader.GetDateTime(reader.GetOrdinal("start_time"));
+                                DateTime endTime = reader.GetDateTime(reader.GetOrdinal("end_time"));
+
+                                Movie movie = Movie.GetMoviesById(movieId);
+
+                                Timetable timeslot = new Timetable(id, movie, capacity, date, startTime, endTime);
+
+                                timetable.Add(timeslot);
+                            }
+                        }
+
+                    }
+
+                }
+                catch (SqlException sqlException)
+                {
+                    MessageBox.Show(sqlException.Message, "Sql Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Sql Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    //Check if the connection is open before closing
+                    if (connection.State == System.Data.ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+
+
+            return timetable;
+        }
+
+        public static List<Timetable> GetMovieTimeSlotsForDate(int movieId, DateTime date)
+        {
+            List<Timetable> allTimeslots = Timetable.GetAllAvailableTimeSlots();
+
+            List<Timetable> slotsForSpecificMovieAndDate = allTimeslots
+                .Where(slot => slot.Movie.Id == movieId && slot.Date.Date == date.Date)
+                .ToList();
+
+            return slotsForSpecificMovieAndDate;
         }
 
     }

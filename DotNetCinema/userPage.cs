@@ -106,6 +106,10 @@ namespace DotNetCinema
                 if (bookingButton.Tag is Movie movie)
                 {
                     //Redirect to booking here
+                    BookingForm bookingForm = new BookingForm(userId, movie.Id);
+
+                    this.Hide();
+                    bookingForm.Show();
                 }
             }
         }
@@ -127,7 +131,7 @@ namespace DotNetCinema
         private void button2_Click(object sender, EventArgs e)
         {
             // Show Booking Form
-            BookingForm bookingForm = new BookingForm();
+            BookingForm bookingForm = new BookingForm(0, 0);
             bookingForm.Show();
             this.Close();
         }
@@ -135,7 +139,7 @@ namespace DotNetCinema
         private void button3_Click(object sender, EventArgs e)
         {
             // Show Booking Form
-            BookingForm bookingForm = new BookingForm();
+            BookingForm bookingForm = new BookingForm(0, 0);
             bookingForm.Show();
             this.Close();
         }

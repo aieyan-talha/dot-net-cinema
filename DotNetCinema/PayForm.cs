@@ -12,7 +12,7 @@ namespace DotNetCinema
 {
     public partial class PayForm : Form
     {
-        public PayForm()
+        public PayForm(int userId, int movieId, int timeslotId, int nSeats)
         {
             InitializeComponent();
         }
@@ -46,6 +46,16 @@ namespace DotNetCinema
             Form1 form1 = new Form1();
             form1.Show();
             this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_label_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,7 +35,7 @@ namespace DotNetCinema
         private void button2_Click(object sender, EventArgs e)
         {
             // Show Booking Form
-            BookingForm bookingForm = new BookingForm();
+            BookingForm bookingForm = new BookingForm(0,0);
             bookingForm.Show();
             this.Close();
         }
