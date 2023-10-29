@@ -47,12 +47,12 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkRed;
             label1.Location = new Point(43, 37);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(195, 28);
+            label1.Size = new Size(219, 29);
             label1.TabIndex = 0;
             label1.Text = "DOT NET CINEMA";
             label1.Click += label1_Click;
@@ -110,7 +110,6 @@
             comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Movie1", "Movie2", "Movie3" });
             comboBox1.Location = new Point(281, 150);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
