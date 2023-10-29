@@ -44,5 +44,13 @@ namespace DotNetCinema
         {
             this.Close();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            // Show Adding Completion Form
+            AAddCompForm addCompForm = new AAddCompForm();
+            this.Close();
+            addCompForm.ShowDialog();
+        }
     }
 }

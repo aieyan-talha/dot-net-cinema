@@ -47,6 +47,11 @@ namespace DotNetCinema
                 if (user.Type == User.UserType.Admin)
                 {
                     // Go to admin page
+                    AdminPage adminPage = new AdminPage();
+                    // adminPage.userId = user.Id();
+
+                    this.Hide();
+                    adminPage.Show();
                 }
                 else if (user.Type == User.UserType.Customer)
                 {

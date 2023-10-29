@@ -59,7 +59,7 @@ namespace DotNetCinema
             string phone = txtPhone.Text;
             string username = txtUsername.Text;
             DateTime dob = dobDatePicker.Value;
-            string gender = genderComboBox.SelectedItem.ToString() ?? "";
+            string gender = genderComboBox.SelectedItem == null ? String.Empty : genderComboBox.SelectedItem.ToString(); // Exception Handling             // Exception Handling
 
             bool hasErrors = false;
 
@@ -67,7 +67,7 @@ namespace DotNetCinema
             //Check for empty fields
             if (firstName == "")
             {
-                first_name_error.Text = "First name is requried";
+                first_name_error.Text = "First name is required";
                 hasErrors = true;
             }
             else
@@ -78,7 +78,7 @@ namespace DotNetCinema
 
             if (lastName == "")
             {
-                last_name_error.Text = "Last name is requried";
+                last_name_error.Text = "Last name is required";
                 hasErrors = true;
             }
             else
@@ -102,7 +102,7 @@ namespace DotNetCinema
 
             if (phone == "")
             {
-                mobile_error.Text = "Phone number is requried";
+                mobile_error.Text = "Phone number is required";
                 hasErrors = true;
             }
             else
@@ -113,7 +113,7 @@ namespace DotNetCinema
 
             if (gender == "")
             {
-                gender_error.Text = "Gender is requried";
+                gender_error.Text = "Gender is required";
                 hasErrors = true;
             }
             else
@@ -124,7 +124,7 @@ namespace DotNetCinema
 
             if (username == "")
             {
-                userName_error.Text = "User name is requried";
+                userName_error.Text = "User name is required";
                 hasErrors = true;
             }
             else

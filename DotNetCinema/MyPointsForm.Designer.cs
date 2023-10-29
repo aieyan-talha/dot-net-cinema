@@ -33,7 +33,6 @@
             label8 = new Label();
             button1 = new Button();
             label3 = new Label();
-            button3 = new Button();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -86,7 +85,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(81, 381);
+            button1.Location = new Point(335, 375);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(135, 28);
@@ -104,28 +103,9 @@
             label3.Location = new Point(478, 204);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(70, 23);
+            label3.Size = new Size(60, 23);
             label3.TabIndex = 29;
-            label3.Text = "2200 pt";
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.None;
-            button3.BackColor = Color.FromArgb(44, 44, 44);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.DarkRed;
-            button3.FlatAppearance.BorderSize = 2;
-            button3.FlatStyle = FlatStyle.System;
-            button3.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(615, 381);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(140, 28);
-            button3.TabIndex = 19;
-            button3.Text = "HOME";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            label3.Text = "200 pt";
             // 
             // label4
             // 
@@ -150,7 +130,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(button1);
-            Controls.Add(button3);
             Controls.Add(label8);
             Controls.Add(label2);
             Controls.Add(label1);

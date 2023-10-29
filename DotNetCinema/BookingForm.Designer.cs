@@ -87,12 +87,13 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.AppWorkspace;
-            label5.Location = new Point(252, 110);
+            label5.Location = new Point(223, 113);
             label5.Name = "label5";
-            label5.Size = new Size(274, 18);
+            label5.Size = new Size(338, 23);
             label5.TabIndex = 20;
             label5.Text = "Select available session time to buy tickets.";
             // 
@@ -168,6 +169,7 @@
             // 
             // available_dates
             // 
+            available_dates.Anchor = AnchorStyles.None;
             available_dates.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             available_dates.FormattingEnabled = true;
             available_dates.Location = new Point(369, 211);
@@ -178,6 +180,7 @@
             // 
             // available_times
             // 
+            available_times.Anchor = AnchorStyles.None;
             available_times.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             available_times.FormattingEnabled = true;
             available_times.Location = new Point(369, 261);
@@ -188,6 +191,7 @@
             // 
             // nPeople
             // 
+            nPeople.Anchor = AnchorStyles.None;
             nPeople.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             nPeople.FormattingEnabled = true;
             nPeople.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });

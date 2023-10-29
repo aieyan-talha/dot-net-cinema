@@ -148,6 +148,7 @@
             button3.TabIndex = 36;
             button3.Text = "ADD";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // username_error
             // 

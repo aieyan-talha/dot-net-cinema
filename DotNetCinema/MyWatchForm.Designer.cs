@@ -36,7 +36,6 @@
             label3 = new Label();
             label4 = new Label();
             label7 = new Label();
-            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -88,7 +87,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(81, 381);
+            button1.Location = new Point(332, 382);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(135, 28);
@@ -149,25 +148,6 @@
             label7.TabIndex = 31;
             label7.Text = "SEATS";
             // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.None;
-            button3.BackColor = Color.FromArgb(44, 44, 44);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.DarkRed;
-            button3.FlatAppearance.BorderSize = 2;
-            button3.FlatStyle = FlatStyle.System;
-            button3.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(615, 381);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(140, 28);
-            button3.TabIndex = 19;
-            button3.Text = "HOME";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // MyWatchForm
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -180,7 +160,6 @@
             Controls.Add(label3);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(button1);
-            Controls.Add(button3);
             Controls.Add(label8);
             Controls.Add(label2);
             Controls.Add(label1);

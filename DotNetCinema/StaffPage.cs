@@ -35,7 +35,7 @@ namespace DotNetCinema
         private void button2_Click(object sender, EventArgs e)
         {
             // Show Booking Form
-            BookingForm bookingForm = new BookingForm(0,0);
+            BookingForm bookingForm = new BookingForm(0, 0);
             bookingForm.Show();
             this.Close();
         }
@@ -74,6 +74,12 @@ namespace DotNetCinema
                 case "List of Tickets of a Movie":
 
                     formToOpen = new SListTicketsForm();
+
+                    break;
+
+                case "Add a Movie":
+
+                    formToOpen = new AAddMoviesForm();
 
                     break;
             }

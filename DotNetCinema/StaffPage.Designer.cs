@@ -59,7 +59,7 @@
             comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "List of Movies", "Search Movies", "List of Tickets of a Movie" });
+            comboBox1.Items.AddRange(new object[] { "List of Movies", "Search Movies", "List of Tickets of a Movie", "Add a Movie" });
             comboBox1.Location = new Point(227, 221);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
@@ -85,6 +85,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Calibri Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.AppWorkspace;

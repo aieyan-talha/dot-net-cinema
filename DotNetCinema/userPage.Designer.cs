@@ -34,6 +34,7 @@
             button1 = new Button();
             label2 = new Label();
             label9 = new Label();
+            welcome_label = new Label();
             SuspendLayout();
             // 
             // label1
@@ -45,7 +46,7 @@
             label1.Location = new Point(56, 28);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(245, 34);
+            label1.Size = new Size(195, 28);
             label1.TabIndex = 0;
             label1.Text = "DOT NET CINEMA";
             label1.Click += label1_Click;
@@ -64,7 +65,7 @@
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
             comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(149, 32);
+            comboBox1.Size = new Size(149, 27);
             comboBox1.TabIndex = 1;
             comboBox1.Text = "MY PAGE";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -75,13 +76,13 @@
             textBox1.BackColor = Color.Black;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ButtonFace;
             textBox1.Location = new Point(307, 80);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search";
-            textBox1.Size = new Size(478, 32);
+            textBox1.Size = new Size(478, 26);
             textBox1.TabIndex = 2;
             // 
             // button1
@@ -96,7 +97,7 @@
             button1.Location = new Point(714, 80);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(71, 32);
+            button1.Size = new Size(71, 26);
             button1.TabIndex = 3;
             button1.Text = "FIND";
             button1.UseVisualStyleBackColor = false;
@@ -110,7 +111,7 @@
             label2.Location = new Point(307, 148);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(178, 33);
+            label2.Size = new Size(139, 26);
             label2.TabIndex = 4;
             label2.Text = "Now Showing";
             label2.Click += label2_Click;
@@ -121,19 +122,31 @@
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(785, 28);
+            label9.Location = new Point(785, 30);
             label9.Name = "label9";
-            label9.Size = new Size(117, 28);
+            label9.Size = new Size(97, 23);
             label9.TabIndex = 21;
             label9.Text = "Points: 200";
             // 
+            // welcome_label
+            // 
+            welcome_label.Anchor = AnchorStyles.None;
+            welcome_label.AutoSize = true;
+            welcome_label.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            welcome_label.Location = new Point(426, 29);
+            welcome_label.Name = "welcome_label";
+            welcome_label.Size = new Size(235, 23);
+            welcome_label.TabIndex = 22;
+            welcome_label.Text = "Welcome to Dot Net Cinema";
+            // 
             // UserPage
             // 
-            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(1077, 858);
+            Controls.Add(welcome_label);
             Controls.Add(label9);
             Controls.Add(label2);
             Controls.Add(button1);
@@ -157,5 +170,6 @@
         private Button button1;
         private Label label2;
         private Label label9;
+        private Label welcome_label;
     }
 }
