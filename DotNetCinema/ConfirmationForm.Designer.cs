@@ -33,11 +33,16 @@
             label5 = new Label();
             label8 = new Label();
             button1 = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
             label3 = new Label();
             label4 = new Label();
             label7 = new Label();
             button3 = new Button();
+            name_label = new Label();
+            date_label = new Label();
+            nTicket_label = new Label();
+            time_label = new Label();
+            label6 = new Label();
+            price_label = new Label();
             SuspendLayout();
             // 
             // label1
@@ -85,12 +90,13 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(186, 193);
+            label8.Location = new Point(164, 193);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(52, 19);
+            label8.Size = new Size(55, 19);
             label8.TabIndex = 17;
-            label8.Text = "Movie";
+            label8.Text = "MOVIE";
+            label8.Click += label8_Click;
             // 
             // button1
             // 
@@ -110,27 +116,12 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.None;
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.5435448F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 56.4564552F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 68F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 88F));
-            tableLayoutPanel1.Location = new Point(127, 215);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(546, 34);
-            tableLayoutPanel1.TabIndex = 28;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(381, 193);
+            label3.Location = new Point(325, 193);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(44, 19);
@@ -142,7 +133,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(519, 193);
+            label4.Location = new Point(465, 193);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(62, 19);
@@ -157,9 +148,9 @@
             label7.Location = new Point(602, 193);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(50, 19);
+            label7.Size = new Size(43, 19);
             label7.TabIndex = 31;
-            label7.Text = "SEATS";
+            label7.Text = "TIME";
             // 
             // button3
             // 
@@ -180,6 +171,70 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // name_label
+            // 
+            name_label.Anchor = AnchorStyles.None;
+            name_label.AutoSize = true;
+            name_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            name_label.Location = new Point(164, 224);
+            name_label.Name = "name_label";
+            name_label.Size = new Size(49, 19);
+            name_label.TabIndex = 32;
+            name_label.Text = "Movie";
+            // 
+            // date_label
+            // 
+            date_label.Anchor = AnchorStyles.None;
+            date_label.AutoSize = true;
+            date_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            date_label.Location = new Point(325, 224);
+            date_label.Name = "date_label";
+            date_label.Size = new Size(40, 19);
+            date_label.TabIndex = 33;
+            date_label.Text = "Date";
+            // 
+            // nTicket_label
+            // 
+            nTicket_label.Anchor = AnchorStyles.None;
+            nTicket_label.AutoSize = true;
+            nTicket_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            nTicket_label.Location = new Point(465, 224);
+            nTicket_label.Name = "nTicket_label";
+            nTicket_label.Size = new Size(54, 19);
+            nTicket_label.TabIndex = 34;
+            nTicket_label.Text = "Tickets";
+            // 
+            // time_label
+            // 
+            time_label.Anchor = AnchorStyles.None;
+            time_label.AutoSize = true;
+            time_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            time_label.Location = new Point(602, 224);
+            time_label.Name = "time_label";
+            time_label.Size = new Size(41, 19);
+            time_label.TabIndex = 35;
+            time_label.Text = "Time";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(356, 277);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 26);
+            label6.TabIndex = 36;
+            label6.Text = "Total Bill";
+            // 
+            // price_label
+            // 
+            price_label.AutoSize = true;
+            price_label.Font = new Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            price_label.Location = new Point(356, 303);
+            price_label.Name = "price_label";
+            price_label.Size = new Size(85, 26);
+            price_label.TabIndex = 37;
+            price_label.Text = "Total Bill";
+            // 
             // ConfirmationForm
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -187,10 +242,15 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 452);
+            Controls.Add(price_label);
+            Controls.Add(label6);
+            Controls.Add(time_label);
+            Controls.Add(nTicket_label);
+            Controls.Add(date_label);
+            Controls.Add(name_label);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(button3);
@@ -213,10 +273,15 @@
         private Label label5;
         private Label label8;
         private Button button1;
-        private TableLayoutPanel tableLayoutPanel1;
         private Label label3;
         private Label label4;
         private Label label7;
         private Button button3;
+        private Label name_label;
+        private Label date_label;
+        private Label nTicket_label;
+        private Label time_label;
+        private Label label6;
+        private Label price_label;
     }
 }

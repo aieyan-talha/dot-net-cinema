@@ -1,4 +1,5 @@
 ﻿using DotNetCinema.Database;
+using DotNetCinema.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,10 +62,25 @@ namespace DotNetCinema
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Movie movie = Movie.GetMoviesById(movieId);
+            Timetable slot = Timetable.GetTimeSlotById(timeslotId);
+
+            List<Customer> customers = Customer.GetCustomersFromDB();
+
+            Customer customer = customers.Where(cust => cust.userId == userId).First();
+
+            // Add tickets to db
+            for (int i=0; i<nSeats; i++)
+            {
+                Ticket newTicket = new Ticket(0, movie, slot, customer, 15, "Standard");
+                newTicket.AddTicketToDb();
+            }
+
+
             // Show Confirmation Form
-            ConfirmationForm confirmationForm = new ConfirmationForm();
+            ConfirmationForm confirmationForm = new ConfirmationForm(userId, movieId, timeslotId, nSeats);
             confirmationForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

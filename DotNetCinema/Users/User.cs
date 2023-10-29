@@ -184,5 +184,14 @@ namespace DotNetCinema.Users
             }
             return results;
         }
+
+        public static User GetUserById(int id) 
+        {
+            List<User> allUser = User.GetUsersFromDB();
+
+            User user = allUser.Where(user => user.Id == id).First();
+
+            return user;
+        }
     }
 }

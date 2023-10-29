@@ -15,14 +15,17 @@ namespace DotNetCinema.Users
     internal class Customer : User
     {
         public int Points {  get; set; }
+        public int userId { get; set; } 
         public Customer() : base()
         {
             Points = 0;
+            userId = 0;
         }
 
-        public Customer(int id, int points, string firstName, string lastName, string email, string phone, string password, string userName, DateTime dob, string gender, UserType type) : base(id, firstName, lastName, email, phone, password, userName, dob, gender, type)
+        public Customer(int id, int points, int userId, string firstName, string lastName, string email, string phone, string password, string userName, DateTime dob, string gender, UserType type) : base(id, firstName, lastName, email, phone, password, userName, dob, gender, type)
         {
             this.Points = points;
+            this.userId = userId;
         }
 
         /// <summary>
@@ -60,6 +63,71 @@ namespace DotNetCinema.Users
                     Console.WriteLine("Error: " + e.Message);
                 }
             }
+        }
+
+        public static List<Customer> GetCustomersFromDB()
+        {
+            List<Customer> customers = new List<Customer>();
+
+            string connectionString = Common.connectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sqlQuery = @"SELECT c.id, c.points, c.user_id, u.first_name, u.last_name, u.email, u.phone, 
+                            u.password, u.DOB, u.gender, u.type, u.username 
+                            FROM [dbo].[Customers] c 
+                            INNER JOIN [dbo].[Users] u ON c.user_id = u.id";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = Convert.ToInt32(reader["Id"]);
+                                int points = Convert.ToInt32(reader["points"]);
+                                int userId = Convert.ToInt32(reader["user_id"]);
+                                string firstName = reader.GetString(reader.GetOrdinal("first_name"));
+                                string lastName = reader.GetString(reader.GetOrdinal("last_name"));
+                                string email = reader.GetString(reader.GetOrdinal("email"));
+                                string phone = reader.GetString(reader.GetOrdinal("phone"));
+                                string password = reader.GetString(reader.GetOrdinal("password"));
+                                string userName = reader.GetString(reader.GetOrdinal("username"));
+                                DateTime DOB = reader.GetDateTime(reader.GetOrdinal("DOB"));
+                                string gender = reader.GetString(reader.GetOrdinal("gender"));
+                                string type = reader.GetString(reader.GetOrdinal("type"));
+
+                                UserType userType = UserType.Customer;
+
+                                try
+                                {
+                                    // Convert string type to UserType enum. The true part takes care of case-insensitive input
+                                    userType = (UserType)Enum.Parse(typeof(UserType), type, true);
+                                }
+                                catch (ArgumentException)
+                                {
+                                    Console.WriteLine("Invalid input string");
+                                }
+
+                                Customer customer = new Customer(id, points, userId, firstName, lastName, email, phone, password, userName, DOB, gender, userType);
+
+                                customers.Add(customer);
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: {0}", e.Message);
+                }
+            }
+
+            return customers;
         }
 
         /* TODO doesn't work yet
