@@ -51,6 +51,7 @@ namespace DotNetCinema
         private void button3_Click_1(object sender, EventArgs e)
         {
             string regexMovie = textBox1.Text;
+            dataGridView1.Rows.Clear();
             PopulateMovies(regexMovie, dataGridView1);
         }
 
