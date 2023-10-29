@@ -182,10 +182,8 @@
             txtLastName.Location = new Point(200, 232);
             txtLastName.Margin = new Padding(3, 2, 3, 2);
             txtLastName.Name = "txtLastName";
-            txtLastName.PlaceholderText = "Password";
             txtLastName.Size = new Size(398, 30);
             txtLastName.TabIndex = 54;
-            txtLastName.UseSystemPasswordChar = true;
             // 
             // email_label
             // 
