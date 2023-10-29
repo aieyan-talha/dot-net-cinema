@@ -52,6 +52,45 @@ namespace DotNetCinema.Database
             End_time = end_time;
         }
 
+        public static Timetable GetTimetableFromDB(int id)
+        {
+            string connectionString = Common.connectionString;
+            Timetable timetable = new Timetable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sqlQuery = "Select * FROM [dbo].[Timetable] WHERE id = @Id";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", id);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int movie_id = Convert.ToInt32(reader["movie_id"]);
+                                int capacity = Convert.ToInt32(reader["capacity"]);
+                                DateTime date = reader.GetDateTime(reader.GetOrdinal("date"));
+                                DateTime start_time = reader.GetDateTime(reader.GetOrdinal("start_time"));
+                                DateTime end_time = reader.GetDateTime(reader.GetOrdinal("end_time"));
+                                Movie movie = Movie.GetMovieFromDB(movie_id);
+                                timetable = new Timetable(id, movie, capacity, date, start_time, end_time);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: {0}", e.Message);
+                }
+                return timetable;
+            }
+        }
         public static List<Timetable> GenerateTimeTableForDate(List<Movie> moviesOfTheDay, DateTime date)
         {
             List<Timetable> timeSlots = new List<Timetable>();

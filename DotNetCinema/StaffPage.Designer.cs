@@ -59,7 +59,7 @@
             comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "List of Movies", "Search Movies", "List of Tickets of a Movie", "Search Tickets" });
+            comboBox1.Items.AddRange(new object[] { "List of Movies", "Search Movies", "List of Tickets of a Movie" });
             comboBox1.Location = new Point(227, 221);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
@@ -123,6 +123,7 @@
             label9.Size = new Size(61, 18);
             label9.TabIndex = 21;
             label9.Text = "Hi, Staff!";
+            label9.Click += label9_Click;
             // 
             // StaffPage
             // 

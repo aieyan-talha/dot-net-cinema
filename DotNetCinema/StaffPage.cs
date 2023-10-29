@@ -64,22 +64,16 @@ namespace DotNetCinema
                     formToOpen = new SListMoviesForm();
 
                     break;
- 
+
                 case "Search Movies":
 
                     formToOpen = new SSearchMoviesForm();
 
                     break;
- 
+
                 case "List of Tickets of a Movie":
 
                     formToOpen = new SListTicketsForm();
-
-                    break;
- 
-                case "Search Tckets":
-
-                    formToOpen = new SSearchTicketsForm();
 
                     break;
             }
@@ -91,6 +85,9 @@ namespace DotNetCinema
             }
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

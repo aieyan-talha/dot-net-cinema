@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetCinema.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace DotNetCinema
         public SListMoviesForm()
         {
             InitializeComponent();
+            PopulateMovies(dataGridView1);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +45,21 @@ namespace DotNetCinema
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SListMoviesForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private static void PopulateMovies(DataGridView viewMovies)
+        {
+            List<Movie> movies = Movie.GetMoviesFromDB();
+
+            foreach (Movie movie in movies)
+            {
+                viewMovies.Rows.Add(movie.Name, movie.Genre, movie.Start_date, movie.End_date);
+            }
         }
     }
 }
