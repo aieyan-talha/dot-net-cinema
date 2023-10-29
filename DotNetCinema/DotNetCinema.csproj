@@ -9,14 +9,86 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BookPage.cs" />
+    <Compile Remove="BookPage.Designer.cs" />
+    <Compile Remove="Form1 - Copy.cs" />
+    <Compile Remove="Form1 - Copy.Designer.cs" />
+    <Compile Remove="MyWatchForm - Copy.cs" />
+    <Compile Remove="MyWatchForm - Copy.Designer.cs" />
+    <Compile Remove="StaffPage - Copy.cs" />
+    <Compile Remove="StaffPage - Copy.Designer.cs" />
+    <Compile Remove="UserPage - Copy %282%29.cs" />
+    <Compile Remove="userPage - Copy %282%29.Designer.cs" />
+    <Compile Remove="UserPage - Copy %283%29.cs" />
+    <Compile Remove="userPage - Copy %283%29.Designer.cs" />
+    <Compile Remove="UserPage - Copy.cs" />
+    <Compile Remove="userPage - Copy.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="BookPage.resx" />
+    <EmbeddedResource Remove="Form1 - Copy.resx" />
+    <EmbeddedResource Remove="MyWatchForm - Copy.resx" />
+    <EmbeddedResource Remove="StaffPage - Copy.resx" />
+    <EmbeddedResource Remove="userPage - Copy %282%29.resx" />
+    <EmbeddedResource Remove="userPage - Copy %283%29.resx" />
+    <EmbeddedResource Remove="userPage - Copy.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AAddMoviesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AManageStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyPointsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AListStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SListTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SSearchTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SSearchMoviesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SListMoviesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyWatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffPage.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 
