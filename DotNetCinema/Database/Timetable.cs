@@ -244,5 +244,13 @@ namespace DotNetCinema.Database
             return slotsForSpecificMovieAndDate;
         }
 
+        public static Timetable GetTimeSlotById (int id)
+        {
+            List<Timetable> allTimeslots = Timetable.GetAllAvailableTimeSlots();
+
+            Timetable slot = allTimeslots.Where(ts => ts.Id == id).First();
+
+            return slot;
+        }
     }
 }
