@@ -59,5 +59,15 @@ namespace DotNetCinema.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap felix_mooneeram_evlkOfkQ5rE_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("felix-mooneeram-evlkOfkQ5rE-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

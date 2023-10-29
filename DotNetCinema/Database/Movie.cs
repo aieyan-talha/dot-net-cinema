@@ -160,5 +160,16 @@ namespace DotNetCinema.Database
 
             return activeMovies;
         }
+
+        public static List<Movie> GetMoviesForTheDay()
+        {
+            List<Movie> movies = GetMoviesFromDB();
+
+            DateTime today = DateTime.Today;
+
+            List<Movie> moviesOfTheDay = movies.Where(movie => today >= movie.Start_date.Date && today <= movie.End_date.Date).ToList();
+
+            return moviesOfTheDay;
+        }
     }
 }
