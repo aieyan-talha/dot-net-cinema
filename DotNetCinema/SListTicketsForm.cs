@@ -48,6 +48,10 @@ namespace DotNetCinema
             this.Close();
         }
 
+        /// <summary>
+        /// Function to add data to combobox
+        /// </summary>
+        /// <param name="movieComboBox"></param>
         private static void PopulateMovieBox(ComboBox movieComboBox)
         {
             List<Movie> movies = Movie.GetActiveMovies();
@@ -58,6 +62,11 @@ namespace DotNetCinema
             }
         }
 
+        /// <summary>
+        /// Function to add ticket data to table
+        /// </summary>
+        /// <param name="viewTickets"></param>
+        /// <param name="movie"></param>
         private static void PopulateTicket(DataGridView viewTickets, Movie movie)
         {
             List<Ticket> tickets = Ticket.GetTicketsFromDB();

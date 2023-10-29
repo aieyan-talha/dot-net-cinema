@@ -38,6 +38,10 @@ namespace DotNetCinema.Database
             Type = type;
         }
 
+        /// <summary>
+        /// Method to get all the tickets from DB
+        /// </summary>
+        /// <returns></returns>
         public static List<Ticket> GetTicketsFromDB()
         {
             List<Ticket> tickets = new List<Ticket>();
@@ -88,6 +92,10 @@ namespace DotNetCinema.Database
             return tickets;
         }
 
+        /// <summary>
+        /// Method to add a ticket to DB
+        /// </summary>
+        /// <returns></returns>
         public bool AddTicketToDb()
         {
             string connectionString = Common.connectionString;

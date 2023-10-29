@@ -52,6 +52,10 @@ namespace DotNetCinema
 
         }
 
+        /// <summary>
+        /// Function to add movie data to table
+        /// </summary>
+        /// <param name="viewMovies"></param>
         private static void PopulateMovies(DataGridView viewMovies)
         {
             List<Movie> movies = Movie.GetMoviesFromDB();

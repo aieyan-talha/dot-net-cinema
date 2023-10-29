@@ -110,11 +110,5 @@ namespace DotNetCinema.Users
                 }
             }
         }
-
-        //TODO
-        public static void CreateTimetable() 
-        {
-
-        }
     }
 }

@@ -55,6 +55,11 @@ namespace DotNetCinema
             PopulateMovies(regexMovie, dataGridView1);
         }
 
+        /// <summary>
+        /// Function to add movie data to table
+        /// </summary>
+        /// <param name="regexMovie"></param>
+        /// <param name="viewMovies"></param>
         private static void PopulateMovies(string regexMovie, DataGridView viewMovies)
         {
             List<Movie> movies = Movie.GetMoviesFromDB();

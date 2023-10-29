@@ -28,6 +28,11 @@ namespace DotNetCinema.Users
             this.userId = userId;
         }
 
+        /// <summary>
+        /// Method to get customer from DB
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Customer GetCustomerFromDB(int id)
         {
             int user_id = 0;
@@ -138,6 +143,10 @@ namespace DotNetCinema.Users
             }
         }
 
+        /// <summary>
+        /// Method to get all customers from DB
+        /// </summary>
+        /// <returns></returns>
         public static List<Customer> GetCustomersFromDB()
         {
             List<Customer> customers = new List<Customer>();
@@ -201,65 +210,6 @@ namespace DotNetCinema.Users
             }
 
             return customers;
-        }
-
-        /* TODO doesn't work yet
-        /// <summary>
-        /// Method to return a list of all the tickets user bought
-        /// </summary>
-        /// <returns></returns>
-        public List<Ticket> TicketHistory() 
-        {
-            List<Ticket> tickets = new List<Ticket>();
-
-            string connectionString = Common.connectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    string sqlQuery = "Select * FROM [dbo].[Tickets] WHERE customer_id = @Customer_id";
-
-                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                cmd.Parameters.AddWithValue("@customer_id", Id);
-                                int id = Convert.ToInt32(reader["id"]);
-                                int movie_id = Convert.ToInt32(reader["movie_id"]);
-                                int time_id = Convert.ToInt32(reader["time_id"]);
-                                int customer_id = Convert.ToInt32(reader["Customer_id"]);
-                                int price = Convert.ToInt32(reader["price"]);
-                                string type = reader.GetString(reader.GetOrdinal("type"));
-
-                                Movie movie = (Movie) getById.ById("Movies", movie_id);
-                                Timetable timetable = (Timetable) getById.ById("Timetable", time_id);
-                                Customer customer = (Customer)getById.ById("Users", customer_id);
-
-                                Ticket ticket = new Ticket(id, movie, timetable, customer, price, type);
-
-                                tickets.Add(ticket);
-                            }
-                        }
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Error: {0}", e.Message);
-                }
-            }
-            return tickets;
-        }*/
-
-        //TODO
-        public void BookTicket()
-        {
-
-        }
+        }        
     }
 }

@@ -101,6 +101,11 @@ namespace DotNetCinema.Database
             return movies;
         }
 
+        /// <summary>
+        /// Method to get specific movie from DB
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Movie</returns>
         public static Movie GetMovieFromDB(int id)
         {
             string connectionString = Common.connectionString;
@@ -145,6 +150,10 @@ namespace DotNetCinema.Database
             }
         }
 
+        /// <summary>
+        /// Method to get all movies that are currently running
+        /// </summary>
+        /// <returns>List<Movie></Movie></returns>
         public static List<Movie> GetActiveMovies()
         {
             List<Movie> movies = new List<Movie>();
@@ -196,6 +205,12 @@ namespace DotNetCinema.Database
             return movies;
         }
 
+        /// <summary>
+        /// Method to get all movies between two dates
+        /// </summary>
+        /// <param name="Start_date"></param>
+        /// <param name="End_date"></param>
+        /// <returns>List<Movie></Movie></returns>
         public static List<Movie> GetMoviesBetweenDates(DateTime Start_date, DateTime End_date)
         {
             List<Movie> movies = GetMoviesFromDB();
@@ -205,6 +220,10 @@ namespace DotNetCinema.Database
             return activeMovies;
         }
 
+        /// <summary>
+        /// Method to get all the movies that are playing today
+        /// </summary>
+        /// <returns></returns>
         public static List<Movie> GetMoviesForTheDay()
         {
             List<Movie> movies = GetMoviesFromDB();
@@ -216,6 +235,11 @@ namespace DotNetCinema.Database
             return moviesOfTheDay;
         }
 
+        /// <summary>
+        /// Method to get movie by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Movie GetMoviesById (int id)
         {
             List<Movie> movies = GetMoviesFromDB();

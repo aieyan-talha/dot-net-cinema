@@ -53,6 +53,11 @@ namespace DotNetCinema.Database
             End_time = end_time;
         }
 
+        /// <summary>
+        /// Method to get a timetable from DB
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Timetable</returns>
         public static Timetable GetTimetableFromDB(int id)
         {
             string connectionString = Common.connectionString;
@@ -92,6 +97,13 @@ namespace DotNetCinema.Database
                 return timetable;
             }
         }
+
+        /// <summary>
+        /// Method to generate a time table for a specific date
+        /// </summary>
+        /// <param name="moviesOfTheDay"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static List<Timetable> GenerateTimeTableForDate(List<Movie> moviesOfTheDay, DateTime date)
         {
             List<Timetable> timeSlots = new List<Timetable>();
@@ -133,6 +145,12 @@ namespace DotNetCinema.Database
             return timeSlots;
         }
 
+        /// <summary>
+        /// Method to generate a time table between two dates
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
         public static List<Timetable> GenerateTimeTableBetweenDates(DateTime startDate, DateTime endDate)
         {
             List<Timetable> timeTable = new List<Timetable>();
@@ -160,6 +178,11 @@ namespace DotNetCinema.Database
             return timeTable;
         }
 
+        /// <summary>
+        /// Method to add time slots in DB
+        /// </summary>
+        /// <param name="timeslots"></param>
+        /// <returns></returns>
         public static bool AddTimeSlotsInDB(List<Timetable> timeslots)
         {
             string connectionString = Common.connectionString;
@@ -209,6 +232,10 @@ namespace DotNetCinema.Database
             }
         }
 
+        /// <summary>
+        /// Method to get all available time slots
+        /// </summary>
+        /// <returns></returns>
         public static List<Timetable> GetAllAvailableTimeSlots()
         {
             List<Timetable> timetable = new List<Timetable>();
@@ -272,6 +299,12 @@ namespace DotNetCinema.Database
             return timetable;
         }
 
+        /// <summary>
+        /// Method to get all the movie time slots for a date
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static List<Timetable> GetMovieTimeSlotsForDate(int movieId, DateTime date)
         {
             List<Timetable> allTimeslots = Timetable.GetAllAvailableTimeSlots();
@@ -283,6 +316,11 @@ namespace DotNetCinema.Database
             return slotsForSpecificMovieAndDate;
         }
 
+        /// <summary>
+        /// Method to get time slot by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Timetable GetTimeSlotById (int id)
         {
             List<Timetable> allTimeslots = Timetable.GetAllAvailableTimeSlots();

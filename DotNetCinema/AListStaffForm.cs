@@ -47,6 +47,10 @@ namespace DotNetCinema
             this.Close();
         }
 
+        /// <summary>
+        /// Function to print the staff in table
+        /// </summary>
+        /// <param name="staffListGridView"></param>
         private static void PopulateStaff(DataGridView staffListGridView)
         {
             List<User> staff = Employee.ListUserType(User.GetUsersFromDB(), "Manager");

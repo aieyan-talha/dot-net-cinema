@@ -18,7 +18,11 @@ namespace DotNetCinema.Utils
     {
         public static string connectionString = "Server=tcp:uts-dot-net.database.windows.net,1433;Initial Catalog=Dot Net Cinema;Persist Security Info=False;User ID=dot-net-admin;Password=SomeRandPass@32998;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        //This method converts date string recieved from dataTimePicker and converts it to DB date format
+        /// <summary>
+        /// This method converts date string recieved from dataTimePicker and converts it to DB date format
+        /// </summary>
+        /// <param name="dateString"></param>
+        /// <returns></returns>
         public static string convertDateString(string dateString)
         {
             DateTime inputDate = DateTime.ParseExact(dateString, "dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -28,6 +32,11 @@ namespace DotNetCinema.Utils
             return output;
         }
 
+        /// <summary>
+        /// Method to check if Email is valid
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public static bool IsValidEmail(string email)
         {
             string pattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";

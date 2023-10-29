@@ -60,6 +60,10 @@ namespace DotNetCinema.Users
             Type = type;
         }
 
+        /// <summary>
+        /// Method to get all users from DB
+        /// </summary>
+        /// <returns></returns>
         public static List<User> GetUsersFromDB()
         {
             List<User> users = new List<User>();
@@ -185,6 +189,11 @@ namespace DotNetCinema.Users
             return results;
         }
 
+        /// <summary>
+        /// Method to get user by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static User GetUserById(int id) 
         {
             List<User> allUser = User.GetUsersFromDB();
