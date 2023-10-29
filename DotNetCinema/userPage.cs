@@ -63,7 +63,7 @@ namespace DotNetCinema
                     break;
 
                 case "My Watchlist":
-                    formToOpen = new MyWatchForm(); 
+                    formToOpen = new MyWatchForm();
                     break;
 
                 case "My Points":
@@ -82,6 +82,11 @@ namespace DotNetCinema
             {
                 formToOpen.ShowDialog();
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,10 +54,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkRed;
-            label1.Location = new Point(21, 18);
+            label1.Location = new Point(45, 24);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(195, 28);
+            label1.Size = new Size(245, 34);
             label1.TabIndex = 0;
             label1.Text = "DOT NET CINEMA";
             label1.Click += label1_Click;
@@ -72,11 +72,11 @@
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "My Tickets", "My Watchlist", "My Points", "Sign Out" });
-            comboBox1.Location = new Point(674, 13);
+            comboBox1.Location = new Point(875, 29);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
             comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(131, 27);
+            comboBox1.Size = new Size(131, 32);
             comboBox1.TabIndex = 1;
             comboBox1.Text = "MY PAGE";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -89,11 +89,11 @@
             textBox1.Cursor = Cursors.IBeam;
             textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ButtonFace;
-            textBox1.Location = new Point(167, 61);
+            textBox1.Location = new Point(283, 84);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search";
-            textBox1.Size = new Size(478, 26);
+            textBox1.Size = new Size(478, 32);
             textBox1.TabIndex = 2;
             // 
             // button1
@@ -105,10 +105,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.DarkRed;
-            button1.Location = new Point(574, 61);
+            button1.Location = new Point(690, 84);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(71, 26);
+            button1.Size = new Size(71, 32);
             button1.TabIndex = 3;
             button1.Text = "FIND";
             button1.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Corbel", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(75, 99);
+            label2.Location = new Point(181, 148);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(139, 26);
+            label2.Size = new Size(178, 33);
             label2.TabIndex = 4;
             label2.Text = "Now Showing";
             label2.Click += label2_Click;
@@ -130,7 +130,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Location = new Point(75, 138);
+            pictureBox1.Location = new Point(182, 193);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(109, 135);
@@ -143,10 +143,10 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(207, 153);
+            label3.Location = new Point(314, 208);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(116, 19);
+            label3.Size = new Size(140, 24);
             label3.TabIndex = 8;
             label3.Text = "NAME of movie";
             // 
@@ -155,10 +155,10 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(208, 180);
+            label6.Location = new Point(315, 235);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(52, 15);
+            label6.Size = new Size(68, 21);
             label6.TabIndex = 11;
             label6.Text = "166 min";
             // 
@@ -172,7 +172,7 @@
             button2.FlatStyle = FlatStyle.System;
             button2.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(208, 245);
+            button2.Location = new Point(315, 300);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(70, 28);
@@ -183,23 +183,26 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.AppWorkspace;
-            label4.Location = new Point(208, 201);
+            label4.Location = new Point(315, 256);
             label4.Name = "label4";
-            label4.Size = new Size(443, 15);
+            label4.Size = new Size(588, 21);
             label4.TabIndex = 15;
             label4.Text = "Here goes a movie description. This movie is about ~ maybe two to three sentences.";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Calibri Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.AppWorkspace;
-            label5.Location = new Point(208, 360);
+            label5.Location = new Point(315, 415);
             label5.Name = "label5";
-            label5.Size = new Size(443, 15);
+            label5.Size = new Size(588, 21);
             label5.TabIndex = 20;
             label5.Text = "Here goes a movie description. This movie is about ~ maybe two to three sentences.";
             // 
@@ -213,7 +216,7 @@
             button3.FlatStyle = FlatStyle.System;
             button3.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonFace;
-            button3.Location = new Point(208, 404);
+            button3.Location = new Point(315, 459);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(70, 28);
@@ -227,10 +230,10 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(208, 339);
+            label7.Location = new Point(315, 394);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(52, 15);
+            label7.Size = new Size(68, 21);
             label7.TabIndex = 18;
             label7.Text = "166 min";
             // 
@@ -239,17 +242,17 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(207, 312);
+            label8.Location = new Point(314, 367);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(116, 19);
+            label8.Size = new Size(140, 24);
             label8.TabIndex = 17;
             label8.Text = "NAME of movie";
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.Location = new Point(75, 297);
+            pictureBox2.Location = new Point(182, 352);
             pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(109, 135);
@@ -258,22 +261,23 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.DarkRed;
-            label9.Location = new Point(606, 21);
+            label9.Location = new Point(787, 38);
             label9.Name = "label9";
-            label9.Size = new Size(63, 13);
+            label9.Size = new Size(73, 17);
             label9.TabIndex = 21;
             label9.Text = "2900 Points";
             // 
             // UserPage
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
-            ClientSize = new Size(816, 452);
+            ClientSize = new Size(1028, 678);
             Controls.Add(label9);
             Controls.Add(label5);
             Controls.Add(button3);
