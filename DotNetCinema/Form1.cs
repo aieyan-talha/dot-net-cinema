@@ -50,7 +50,8 @@ namespace DotNetCinema
                 else if (user.Type == User.UserType.Customer)
                 {
                     // Go to customer page
-                    UserPage userPageForm = new UserPage(user);
+                    UserPage userPageForm = new UserPage();
+                    userPageForm.userId = user.Id;
 
                     this.Hide();
                     userPageForm.Show();
