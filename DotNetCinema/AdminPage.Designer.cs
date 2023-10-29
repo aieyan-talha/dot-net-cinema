@@ -59,7 +59,7 @@
             comboBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = SystemColors.ButtonFace;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "List of Staff", "Manage Staff Account", "Search Staff", "Add Movies" });
+            comboBox1.Items.AddRange(new object[] { "List of Staff", "Add Staff Account" });
             comboBox1.Location = new Point(227, 221);
             comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
