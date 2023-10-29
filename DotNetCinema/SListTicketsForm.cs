@@ -78,11 +78,13 @@ namespace DotNetCinema
             string selectedItem = comboBox1.SelectedItem.ToString();
 
             List<Movie> movies = Movie.GetActiveMovies();
+            dataGridView1.Rows.Clear();
             foreach (Movie movie in movies)
             {
                 if (movie.Name == selectedItem)
                 {
                     PopulateTicket(dataGridView1, movie);
+                    break;
                 }
             }
         }
