@@ -31,29 +31,34 @@
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
-            label9 = new Label();
-            button2 = new Button();
             button3 = new Button();
             username_error = new Label();
             password_error = new Label();
             email_address_error = new Label();
             username_label = new Label();
-            register_username = new TextBox();
+            genre = new TextBox();
             mobile = new Label();
-            register_mobile = new TextBox();
+            description = new TextBox();
             lastname = new Label();
             firstname = new Label();
-            register_firstname = new TextBox();
+            image_link = new TextBox();
             password_label = new Label();
-            register_password = new TextBox();
+            length = new TextBox();
             email_label = new Label();
-            register_email = new TextBox();
+            movie_name = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            register_dob = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            numericUpDown1 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            end_date = new DateTimePicker();
+            start_date = new DateTimePicker();
+            priority = new NumericUpDown();
+            movie_name_error = new Label();
+            length_error = new Label();
+            genre_error = new Label();
+            image_link_error = new Label();
+            priority_error = new Label();
+            start_date_error = new Label();
+            description_error = new Label();
+            ((System.ComponentModel.ISupportInitialize)priority).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -101,35 +106,6 @@
             button1.Text = "CLOSE";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(630, 49);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 18);
-            label9.TabIndex = 33;
-            label9.Text = "Hi, Admin!";
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.FromArgb(44, 44, 44);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = SystemColors.ButtonFace;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(720, 43);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(70, 28);
-            button2.TabIndex = 32;
-            button2.Text = "Sign Out";
-            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -192,19 +168,18 @@
             username_label.TabIndex = 48;
             username_label.Text = "Genre";
             // 
-            // register_username
+            // genre
             // 
-            register_username.Anchor = AnchorStyles.None;
-            register_username.BackColor = SystemColors.ControlDarkDark;
-            register_username.BorderStyle = BorderStyle.FixedSingle;
-            register_username.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_username.ForeColor = Color.WhiteSmoke;
-            register_username.Location = new Point(205, 331);
-            register_username.Margin = new Padding(3, 2, 3, 2);
-            register_username.Name = "register_username";
-            register_username.PlaceholderText = "Username";
-            register_username.Size = new Size(398, 30);
-            register_username.TabIndex = 47;
+            genre.Anchor = AnchorStyles.None;
+            genre.BackColor = SystemColors.ControlDarkDark;
+            genre.BorderStyle = BorderStyle.FixedSingle;
+            genre.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            genre.ForeColor = Color.WhiteSmoke;
+            genre.Location = new Point(205, 331);
+            genre.Margin = new Padding(3, 2, 3, 2);
+            genre.Name = "genre";
+            genre.Size = new Size(398, 30);
+            genre.TabIndex = 47;
             // 
             // mobile
             // 
@@ -218,19 +193,18 @@
             mobile.TabIndex = 46;
             mobile.Text = "Start Date";
             // 
-            // register_mobile
+            // description
             // 
-            register_mobile.Anchor = AnchorStyles.None;
-            register_mobile.BackColor = SystemColors.ControlDarkDark;
-            register_mobile.BorderStyle = BorderStyle.FixedSingle;
-            register_mobile.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_mobile.ForeColor = Color.WhiteSmoke;
-            register_mobile.Location = new Point(205, 679);
-            register_mobile.Margin = new Padding(3, 2, 3, 2);
-            register_mobile.Name = "register_mobile";
-            register_mobile.PlaceholderText = "Mobile";
-            register_mobile.Size = new Size(398, 30);
-            register_mobile.TabIndex = 45;
+            description.Anchor = AnchorStyles.None;
+            description.BackColor = SystemColors.ControlDarkDark;
+            description.BorderStyle = BorderStyle.FixedSingle;
+            description.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            description.ForeColor = Color.WhiteSmoke;
+            description.Location = new Point(205, 679);
+            description.Margin = new Padding(3, 2, 3, 2);
+            description.Name = "description";
+            description.Size = new Size(398, 30);
+            description.TabIndex = 45;
             // 
             // lastname
             // 
@@ -256,19 +230,18 @@
             firstname.TabIndex = 42;
             firstname.Text = "Image Link";
             // 
-            // register_firstname
+            // image_link
             // 
-            register_firstname.Anchor = AnchorStyles.None;
-            register_firstname.BackColor = SystemColors.ControlDarkDark;
-            register_firstname.BorderStyle = BorderStyle.FixedSingle;
-            register_firstname.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_firstname.ForeColor = Color.WhiteSmoke;
-            register_firstname.Location = new Point(205, 405);
-            register_firstname.Margin = new Padding(3, 2, 3, 2);
-            register_firstname.Name = "register_firstname";
-            register_firstname.PlaceholderText = "First name";
-            register_firstname.Size = new Size(398, 30);
-            register_firstname.TabIndex = 41;
+            image_link.Anchor = AnchorStyles.None;
+            image_link.BackColor = SystemColors.ControlDarkDark;
+            image_link.BorderStyle = BorderStyle.FixedSingle;
+            image_link.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            image_link.ForeColor = Color.WhiteSmoke;
+            image_link.Location = new Point(205, 405);
+            image_link.Margin = new Padding(3, 2, 3, 2);
+            image_link.Name = "image_link";
+            image_link.Size = new Size(398, 30);
+            image_link.TabIndex = 41;
             // 
             // password_label
             // 
@@ -282,20 +255,18 @@
             password_label.TabIndex = 40;
             password_label.Text = "Length";
             // 
-            // register_password
+            // length
             // 
-            register_password.Anchor = AnchorStyles.None;
-            register_password.BackColor = SystemColors.ControlDarkDark;
-            register_password.BorderStyle = BorderStyle.FixedSingle;
-            register_password.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_password.ForeColor = Color.WhiteSmoke;
-            register_password.Location = new Point(205, 255);
-            register_password.Margin = new Padding(3, 2, 3, 2);
-            register_password.Name = "register_password";
-            register_password.PlaceholderText = "Password";
-            register_password.Size = new Size(398, 30);
-            register_password.TabIndex = 39;
-            register_password.UseSystemPasswordChar = true;
+            length.Anchor = AnchorStyles.None;
+            length.BackColor = SystemColors.ControlDarkDark;
+            length.BorderStyle = BorderStyle.FixedSingle;
+            length.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            length.ForeColor = Color.WhiteSmoke;
+            length.Location = new Point(205, 255);
+            length.Margin = new Padding(3, 2, 3, 2);
+            length.Name = "length";
+            length.Size = new Size(398, 30);
+            length.TabIndex = 39;
             // 
             // email_label
             // 
@@ -309,19 +280,18 @@
             email_label.TabIndex = 38;
             email_label.Text = "Movie Name";
             // 
-            // register_email
+            // movie_name
             // 
-            register_email.Anchor = AnchorStyles.None;
-            register_email.BackColor = SystemColors.ControlDarkDark;
-            register_email.BorderStyle = BorderStyle.FixedSingle;
-            register_email.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_email.ForeColor = Color.WhiteSmoke;
-            register_email.Location = new Point(205, 183);
-            register_email.Margin = new Padding(3, 2, 3, 2);
-            register_email.Name = "register_email";
-            register_email.PlaceholderText = "Email address";
-            register_email.Size = new Size(398, 30);
-            register_email.TabIndex = 37;
+            movie_name.Anchor = AnchorStyles.None;
+            movie_name.BackColor = SystemColors.ControlDarkDark;
+            movie_name.BorderStyle = BorderStyle.FixedSingle;
+            movie_name.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            movie_name.ForeColor = Color.WhiteSmoke;
+            movie_name.Location = new Point(205, 183);
+            movie_name.Margin = new Padding(3, 2, 3, 2);
+            movie_name.Name = "movie_name";
+            movie_name.Size = new Size(398, 30);
+            movie_name.TabIndex = 37;
             // 
             // label3
             // 
@@ -347,44 +317,129 @@
             label4.TabIndex = 53;
             label4.Text = "End Date";
             // 
-            // register_dob
+            // end_date
             // 
-            register_dob.AllowDrop = true;
-            register_dob.Anchor = AnchorStyles.None;
-            register_dob.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            register_dob.CalendarMonthBackground = SystemColors.ControlDarkDark;
-            register_dob.CalendarTitleBackColor = SystemColors.ControlDarkDark;
-            register_dob.CalendarTrailingForeColor = Color.Gray;
-            register_dob.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_dob.Format = DateTimePickerFormat.Short;
-            register_dob.Location = new Point(204, 612);
-            register_dob.Margin = new Padding(3, 2, 3, 2);
-            register_dob.Name = "register_dob";
-            register_dob.Size = new Size(399, 30);
-            register_dob.TabIndex = 56;
+            end_date.AllowDrop = true;
+            end_date.Anchor = AnchorStyles.None;
+            end_date.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            end_date.CalendarMonthBackground = SystemColors.ControlDarkDark;
+            end_date.CalendarTitleBackColor = SystemColors.ControlDarkDark;
+            end_date.CalendarTrailingForeColor = Color.Gray;
+            end_date.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            end_date.Format = DateTimePickerFormat.Short;
+            end_date.Location = new Point(204, 612);
+            end_date.Margin = new Padding(3, 2, 3, 2);
+            end_date.Name = "end_date";
+            end_date.Size = new Size(399, 30);
+            end_date.TabIndex = 56;
             // 
-            // dateTimePicker1
+            // start_date
             // 
-            dateTimePicker1.AllowDrop = true;
-            dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.CalendarMonthBackground = SystemColors.ControlDarkDark;
-            dateTimePicker1.CalendarTitleBackColor = SystemColors.ControlDarkDark;
-            dateTimePicker1.CalendarTrailingForeColor = Color.Gray;
-            dateTimePicker1.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(204, 542);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(399, 30);
-            dateTimePicker1.TabIndex = 57;
+            start_date.AllowDrop = true;
+            start_date.Anchor = AnchorStyles.None;
+            start_date.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            start_date.CalendarMonthBackground = SystemColors.ControlDarkDark;
+            start_date.CalendarTitleBackColor = SystemColors.ControlDarkDark;
+            start_date.CalendarTrailingForeColor = Color.Gray;
+            start_date.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            start_date.Format = DateTimePickerFormat.Short;
+            start_date.Location = new Point(204, 542);
+            start_date.Margin = new Padding(3, 2, 3, 2);
+            start_date.Name = "start_date";
+            start_date.Size = new Size(399, 30);
+            start_date.TabIndex = 57;
             // 
-            // numericUpDown1
+            // priority
             // 
-            numericUpDown1.Location = new Point(205, 484);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(398, 20);
-            numericUpDown1.TabIndex = 58;
+            priority.Anchor = AnchorStyles.None;
+            priority.Location = new Point(205, 484);
+            priority.Name = "priority";
+            priority.Size = new Size(398, 20);
+            priority.TabIndex = 58;
+            // 
+            // movie_name_error
+            // 
+            movie_name_error.Anchor = AnchorStyles.None;
+            movie_name_error.AutoSize = true;
+            movie_name_error.BackColor = SystemColors.ControlDarkDark;
+            movie_name_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            movie_name_error.ForeColor = Color.DarkRed;
+            movie_name_error.Location = new Point(208, 189);
+            movie_name_error.Name = "movie_name_error";
+            movie_name_error.Size = new Size(0, 15);
+            movie_name_error.TabIndex = 59;
+            // 
+            // length_error
+            // 
+            length_error.Anchor = AnchorStyles.None;
+            length_error.AutoSize = true;
+            length_error.BackColor = SystemColors.ControlDarkDark;
+            length_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            length_error.ForeColor = Color.DarkRed;
+            length_error.Location = new Point(208, 261);
+            length_error.Name = "length_error";
+            length_error.Size = new Size(0, 15);
+            length_error.TabIndex = 60;
+            // 
+            // genre_error
+            // 
+            genre_error.Anchor = AnchorStyles.None;
+            genre_error.AutoSize = true;
+            genre_error.BackColor = SystemColors.ControlDarkDark;
+            genre_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            genre_error.ForeColor = Color.DarkRed;
+            genre_error.Location = new Point(212, 337);
+            genre_error.Name = "genre_error";
+            genre_error.Size = new Size(0, 15);
+            genre_error.TabIndex = 61;
+            // 
+            // image_link_error
+            // 
+            image_link_error.Anchor = AnchorStyles.None;
+            image_link_error.AutoSize = true;
+            image_link_error.BackColor = SystemColors.ControlDarkDark;
+            image_link_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            image_link_error.ForeColor = Color.DarkRed;
+            image_link_error.Location = new Point(211, 411);
+            image_link_error.Name = "image_link_error";
+            image_link_error.Size = new Size(0, 15);
+            image_link_error.TabIndex = 62;
+            // 
+            // priority_error
+            // 
+            priority_error.Anchor = AnchorStyles.None;
+            priority_error.AutoSize = true;
+            priority_error.BackColor = SystemColors.Window;
+            priority_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            priority_error.ForeColor = Color.DarkRed;
+            priority_error.Location = new Point(287, 486);
+            priority_error.Name = "priority_error";
+            priority_error.Size = new Size(0, 15);
+            priority_error.TabIndex = 63;
+            // 
+            // start_date_error
+            // 
+            start_date_error.Anchor = AnchorStyles.None;
+            start_date_error.AutoSize = true;
+            start_date_error.BackColor = SystemColors.Window;
+            start_date_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            start_date_error.ForeColor = Color.DarkRed;
+            start_date_error.Location = new Point(318, 551);
+            start_date_error.Name = "start_date_error";
+            start_date_error.Size = new Size(0, 15);
+            start_date_error.TabIndex = 64;
+            // 
+            // description_error
+            // 
+            description_error.Anchor = AnchorStyles.None;
+            description_error.AutoSize = true;
+            description_error.BackColor = SystemColors.ControlDarkDark;
+            description_error.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            description_error.ForeColor = Color.DarkRed;
+            description_error.Location = new Point(211, 687);
+            description_error.Name = "description_error";
+            description_error.Size = new Size(0, 15);
+            description_error.TabIndex = 66;
             // 
             // AAddMoviesForm
             // 
@@ -393,28 +448,33 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 854);
-            Controls.Add(numericUpDown1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(register_dob);
+            Controls.Add(description_error);
+            Controls.Add(start_date_error);
+            Controls.Add(priority_error);
+            Controls.Add(image_link_error);
+            Controls.Add(genre_error);
+            Controls.Add(length_error);
+            Controls.Add(movie_name_error);
+            Controls.Add(priority);
+            Controls.Add(start_date);
+            Controls.Add(end_date);
             Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(username_error);
             Controls.Add(password_error);
             Controls.Add(email_address_error);
             Controls.Add(username_label);
-            Controls.Add(register_username);
+            Controls.Add(genre);
             Controls.Add(mobile);
-            Controls.Add(register_mobile);
+            Controls.Add(description);
             Controls.Add(lastname);
             Controls.Add(firstname);
-            Controls.Add(register_firstname);
+            Controls.Add(image_link);
             Controls.Add(password_label);
-            Controls.Add(register_password);
+            Controls.Add(length);
             Controls.Add(email_label);
-            Controls.Add(register_email);
+            Controls.Add(movie_name);
             Controls.Add(button3);
-            Controls.Add(label9);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -423,7 +483,7 @@
             Margin = new Padding(2);
             Name = "AAddMoviesForm";
             Text = "DOT NET CINEMA Admin - Add Movies";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)priority).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -455,5 +515,21 @@
         private DateTimePicker register_dob;
         private DateTimePicker dateTimePicker1;
         private NumericUpDown numericUpDown1;
+        private TextBox genre;
+        private TextBox description;
+        private TextBox image_link;
+        private TextBox length;
+        private TextBox movie_name;
+        private DateTimePicker end_date;
+        private DateTimePicker start_date;
+        private NumericUpDown priority;
+        private Label movie_name_error;
+        private Label length_error;
+        private Label genre_error;
+        private Label image_link_error;
+        private Label priority_error;
+        private Label start_date_error;
+        private Label end_date_error;
+        private Label description_error;
     }
 }
