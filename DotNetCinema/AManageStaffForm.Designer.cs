@@ -32,24 +32,29 @@
             label2 = new Label();
             button1 = new Button();
             button3 = new Button();
-            username_error = new Label();
-            password_error = new Label();
-            email_address_error = new Label();
-            username_label = new Label();
-            register_username = new TextBox();
+            txtEmail = new TextBox();
             firstname = new Label();
-            register_firstname = new TextBox();
+            txtPhone = new TextBox();
             password_label = new Label();
-            register_password = new TextBox();
+            txtLastName = new TextBox();
             email_label = new Label();
-            register_email = new TextBox();
+            txtFirstName = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtUsername = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
+            dobDatePicker = new DateTimePicker();
+            genderComboBox = new ComboBox();
+            first_name_error = new Label();
+            last_name_error = new Label();
+            email_error = new Label();
+            mobile_error = new Label();
+            gender_error = new Label();
+            user_name_error = new Label();
+            dob_error = new Label();
+            label5 = new Label();
+            userName_error = new Label();
             SuspendLayout();
             // 
             // label1
@@ -117,61 +122,18 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
-            // username_error
+            // txtEmail
             // 
-            username_error.AutoSize = true;
-            username_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            username_error.ForeColor = Color.Red;
-            username_error.Location = new Point(200, 178);
-            username_error.Name = "username_error";
-            username_error.Size = new Size(0, 17);
-            username_error.TabIndex = 62;
-            // 
-            // password_error
-            // 
-            password_error.AutoSize = true;
-            password_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            password_error.ForeColor = Color.Red;
-            password_error.Location = new Point(200, 101);
-            password_error.Name = "password_error";
-            password_error.Size = new Size(0, 17);
-            password_error.TabIndex = 61;
-            // 
-            // email_address_error
-            // 
-            email_address_error.AutoSize = true;
-            email_address_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            email_address_error.ForeColor = Color.Red;
-            email_address_error.Location = new Point(200, 30);
-            email_address_error.Name = "email_address_error";
-            email_address_error.Size = new Size(0, 17);
-            email_address_error.TabIndex = 60;
-            // 
-            // username_label
-            // 
-            username_label.Anchor = AnchorStyles.None;
-            username_label.AutoSize = true;
-            username_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            username_label.ForeColor = Color.WhiteSmoke;
-            username_label.Location = new Point(200, 288);
-            username_label.Name = "username_label";
-            username_label.Size = new Size(45, 19);
-            username_label.TabIndex = 59;
-            username_label.Text = "Email";
-            // 
-            // register_username
-            // 
-            register_username.Anchor = AnchorStyles.None;
-            register_username.BackColor = SystemColors.ControlDarkDark;
-            register_username.BorderStyle = BorderStyle.FixedSingle;
-            register_username.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_username.ForeColor = Color.WhiteSmoke;
-            register_username.Location = new Point(200, 308);
-            register_username.Margin = new Padding(3, 2, 3, 2);
-            register_username.Name = "register_username";
-            register_username.PlaceholderText = "Username";
-            register_username.Size = new Size(398, 30);
-            register_username.TabIndex = 58;
+            txtEmail.Anchor = AnchorStyles.None;
+            txtEmail.BackColor = SystemColors.ControlDarkDark;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.ForeColor = Color.WhiteSmoke;
+            txtEmail.Location = new Point(200, 308);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(398, 30);
+            txtEmail.TabIndex = 58;
             // 
             // firstname
             // 
@@ -185,19 +147,18 @@
             firstname.TabIndex = 57;
             firstname.Text = "Mobile";
             // 
-            // register_firstname
+            // txtPhone
             // 
-            register_firstname.Anchor = AnchorStyles.None;
-            register_firstname.BackColor = SystemColors.ControlDarkDark;
-            register_firstname.BorderStyle = BorderStyle.FixedSingle;
-            register_firstname.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_firstname.ForeColor = Color.WhiteSmoke;
-            register_firstname.Location = new Point(200, 382);
-            register_firstname.Margin = new Padding(3, 2, 3, 2);
-            register_firstname.Name = "register_firstname";
-            register_firstname.PlaceholderText = "First name";
-            register_firstname.Size = new Size(398, 30);
-            register_firstname.TabIndex = 56;
+            txtPhone.Anchor = AnchorStyles.None;
+            txtPhone.BackColor = SystemColors.ControlDarkDark;
+            txtPhone.BorderStyle = BorderStyle.FixedSingle;
+            txtPhone.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPhone.ForeColor = Color.WhiteSmoke;
+            txtPhone.Location = new Point(200, 382);
+            txtPhone.Margin = new Padding(3, 2, 3, 2);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(398, 30);
+            txtPhone.TabIndex = 56;
             // 
             // password_label
             // 
@@ -211,20 +172,20 @@
             password_label.TabIndex = 55;
             password_label.Text = "Last Name";
             // 
-            // register_password
+            // txtLastName
             // 
-            register_password.Anchor = AnchorStyles.None;
-            register_password.BackColor = SystemColors.ControlDarkDark;
-            register_password.BorderStyle = BorderStyle.FixedSingle;
-            register_password.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_password.ForeColor = Color.WhiteSmoke;
-            register_password.Location = new Point(200, 232);
-            register_password.Margin = new Padding(3, 2, 3, 2);
-            register_password.Name = "register_password";
-            register_password.PlaceholderText = "Password";
-            register_password.Size = new Size(398, 30);
-            register_password.TabIndex = 54;
-            register_password.UseSystemPasswordChar = true;
+            txtLastName.Anchor = AnchorStyles.None;
+            txtLastName.BackColor = SystemColors.ControlDarkDark;
+            txtLastName.BorderStyle = BorderStyle.FixedSingle;
+            txtLastName.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLastName.ForeColor = Color.WhiteSmoke;
+            txtLastName.Location = new Point(200, 232);
+            txtLastName.Margin = new Padding(3, 2, 3, 2);
+            txtLastName.Name = "txtLastName";
+            txtLastName.PlaceholderText = "Password";
+            txtLastName.Size = new Size(398, 30);
+            txtLastName.TabIndex = 54;
+            txtLastName.UseSystemPasswordChar = true;
             // 
             // email_label
             // 
@@ -238,19 +199,18 @@
             email_label.TabIndex = 53;
             email_label.Text = "First Name";
             // 
-            // register_email
+            // txtFirstName
             // 
-            register_email.Anchor = AnchorStyles.None;
-            register_email.BackColor = SystemColors.ControlDarkDark;
-            register_email.BorderStyle = BorderStyle.FixedSingle;
-            register_email.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            register_email.ForeColor = Color.WhiteSmoke;
-            register_email.Location = new Point(200, 160);
-            register_email.Margin = new Padding(3, 2, 3, 2);
-            register_email.Name = "register_email";
-            register_email.PlaceholderText = "Email address";
-            register_email.Size = new Size(398, 30);
-            register_email.TabIndex = 52;
+            txtFirstName.Anchor = AnchorStyles.None;
+            txtFirstName.BackColor = SystemColors.ControlDarkDark;
+            txtFirstName.BorderStyle = BorderStyle.FixedSingle;
+            txtFirstName.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFirstName.ForeColor = Color.WhiteSmoke;
+            txtFirstName.Location = new Point(200, 160);
+            txtFirstName.Margin = new Padding(3, 2, 3, 2);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(398, 30);
+            txtFirstName.TabIndex = 52;
             // 
             // label3
             // 
@@ -274,19 +234,18 @@
             label4.TabIndex = 70;
             label4.Text = "User Name";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.BackColor = SystemColors.ControlDarkDark;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(200, 607);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Username";
-            textBox1.Size = new Size(398, 30);
-            textBox1.TabIndex = 69;
+            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.BackColor = SystemColors.ControlDarkDark;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.ForeColor = Color.WhiteSmoke;
+            txtUsername.Location = new Point(200, 607);
+            txtUsername.Margin = new Padding(3, 2, 3, 2);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(398, 30);
+            txtUsername.TabIndex = 69;
             // 
             // label6
             // 
@@ -312,33 +271,143 @@
             label7.TabIndex = 64;
             label7.Text = "Date of Birth";
             // 
-            // dateTimePicker1
+            // dobDatePicker
             // 
-            dateTimePicker1.AllowDrop = true;
-            dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.CalendarMonthBackground = SystemColors.ControlDarkDark;
-            dateTimePicker1.CalendarTitleBackColor = SystemColors.ControlDarkDark;
-            dateTimePicker1.CalendarTrailingForeColor = Color.Gray;
-            dateTimePicker1.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(200, 457);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(399, 30);
-            dateTimePicker1.TabIndex = 72;
+            dobDatePicker.AllowDrop = true;
+            dobDatePicker.Anchor = AnchorStyles.None;
+            dobDatePicker.CalendarFont = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dobDatePicker.CalendarMonthBackground = SystemColors.ControlDarkDark;
+            dobDatePicker.CalendarTitleBackColor = SystemColors.ControlDarkDark;
+            dobDatePicker.CalendarTrailingForeColor = Color.Gray;
+            dobDatePicker.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dobDatePicker.Format = DateTimePickerFormat.Short;
+            dobDatePicker.Location = new Point(200, 457);
+            dobDatePicker.Margin = new Padding(3, 2, 3, 2);
+            dobDatePicker.MaxDate = new DateTime(2023, 10, 29, 21, 22, 36, 0);
+            dobDatePicker.Name = "dobDatePicker";
+            dobDatePicker.Size = new Size(399, 30);
+            dobDatePicker.TabIndex = 72;
+            dobDatePicker.Value = new DateTime(2023, 10, 29, 0, 0, 0, 0);
             // 
-            // comboBox1
+            // genderComboBox
             // 
-            comboBox1.Anchor = AnchorStyles.None;
-            comboBox1.BackColor = SystemColors.ControlDarkDark;
-            comboBox1.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female", "Non-binary" });
-            comboBox1.Location = new Point(199, 533);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(399, 31);
-            comboBox1.TabIndex = 73;
+            genderComboBox.Anchor = AnchorStyles.None;
+            genderComboBox.BackColor = SystemColors.ControlDarkDark;
+            genderComboBox.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            genderComboBox.FormattingEnabled = true;
+            genderComboBox.Items.AddRange(new object[] { "Male", "Female", "Non-binary" });
+            genderComboBox.Location = new Point(199, 533);
+            genderComboBox.Name = "genderComboBox";
+            genderComboBox.Size = new Size(399, 31);
+            genderComboBox.TabIndex = 73;
+            genderComboBox.Text = "Select a Gender";
+            // 
+            // first_name_error
+            // 
+            first_name_error.Anchor = AnchorStyles.None;
+            first_name_error.AutoSize = true;
+            first_name_error.BackColor = SystemColors.ControlDarkDark;
+            first_name_error.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            first_name_error.ForeColor = Color.DarkRed;
+            first_name_error.Location = new Point(202, 164);
+            first_name_error.Name = "first_name_error";
+            first_name_error.Size = new Size(0, 19);
+            first_name_error.TabIndex = 74;
+            // 
+            // last_name_error
+            // 
+            last_name_error.AutoSize = true;
+            last_name_error.BackColor = SystemColors.ControlDarkDark;
+            last_name_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            last_name_error.ForeColor = Color.DarkRed;
+            last_name_error.Location = new Point(201, 240);
+            last_name_error.Name = "last_name_error";
+            last_name_error.Size = new Size(0, 18);
+            last_name_error.TabIndex = 75;
+            // 
+            // email_error
+            // 
+            email_error.Anchor = AnchorStyles.None;
+            email_error.AutoSize = true;
+            email_error.BackColor = SystemColors.ControlDarkDark;
+            email_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            email_error.ForeColor = Color.DarkRed;
+            email_error.Location = new Point(202, 313);
+            email_error.Name = "email_error";
+            email_error.Size = new Size(0, 18);
+            email_error.TabIndex = 76;
+            // 
+            // mobile_error
+            // 
+            mobile_error.Anchor = AnchorStyles.None;
+            mobile_error.AutoSize = true;
+            mobile_error.BackColor = SystemColors.ControlDarkDark;
+            mobile_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            mobile_error.ForeColor = Color.DarkRed;
+            mobile_error.Location = new Point(202, 387);
+            mobile_error.Name = "mobile_error";
+            mobile_error.Size = new Size(0, 18);
+            mobile_error.TabIndex = 77;
+            // 
+            // gender_error
+            // 
+            gender_error.Anchor = AnchorStyles.None;
+            gender_error.AutoSize = true;
+            gender_error.BackColor = SystemColors.ControlDarkDark;
+            gender_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            gender_error.ForeColor = Color.DarkRed;
+            gender_error.Location = new Point(203, 540);
+            gender_error.Name = "gender_error";
+            gender_error.Size = new Size(0, 18);
+            gender_error.TabIndex = 78;
+            // 
+            // user_name_error
+            // 
+            user_name_error.Anchor = AnchorStyles.None;
+            user_name_error.AutoSize = true;
+            user_name_error.BackColor = SystemColors.ControlDarkDark;
+            user_name_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            user_name_error.ForeColor = Color.DarkRed;
+            user_name_error.Location = new Point(203, 612);
+            user_name_error.Name = "user_name_error";
+            user_name_error.Size = new Size(0, 18);
+            user_name_error.TabIndex = 79;
+            // 
+            // dob_error
+            // 
+            dob_error.Anchor = AnchorStyles.None;
+            dob_error.AutoSize = true;
+            dob_error.BackColor = SystemColors.Window;
+            dob_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dob_error.ForeColor = Color.DarkRed;
+            dob_error.Location = new Point(357, 466);
+            dob_error.Name = "dob_error";
+            dob_error.Size = new Size(0, 18);
+            dob_error.TabIndex = 80;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.WhiteSmoke;
+            label5.Location = new Point(199, 287);
+            label5.Name = "label5";
+            label5.Size = new Size(45, 19);
+            label5.TabIndex = 81;
+            label5.Text = "Email";
+            // 
+            // userName_error
+            // 
+            userName_error.Anchor = AnchorStyles.None;
+            userName_error.AutoSize = true;
+            userName_error.BackColor = SystemColors.ControlDarkDark;
+            userName_error.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            userName_error.ForeColor = Color.DarkRed;
+            userName_error.Location = new Point(208, 612);
+            userName_error.Name = "userName_error";
+            userName_error.Size = new Size(0, 18);
+            userName_error.TabIndex = 82;
             // 
             // AManageStaffForm
             // 
@@ -347,24 +416,29 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(816, 772);
-            Controls.Add(comboBox1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(userName_error);
+            Controls.Add(label5);
+            Controls.Add(dob_error);
+            Controls.Add(user_name_error);
+            Controls.Add(gender_error);
+            Controls.Add(mobile_error);
+            Controls.Add(email_error);
+            Controls.Add(last_name_error);
+            Controls.Add(first_name_error);
+            Controls.Add(genderComboBox);
+            Controls.Add(dobDatePicker);
             Controls.Add(label3);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(username_error);
-            Controls.Add(password_error);
-            Controls.Add(email_address_error);
-            Controls.Add(username_label);
-            Controls.Add(register_username);
+            Controls.Add(txtEmail);
             Controls.Add(firstname);
-            Controls.Add(register_firstname);
+            Controls.Add(txtPhone);
             Controls.Add(password_label);
-            Controls.Add(register_password);
+            Controls.Add(txtLastName);
             Controls.Add(email_label);
-            Controls.Add(register_email);
+            Controls.Add(txtFirstName);
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -384,23 +458,28 @@
         private Label label2;
         private Button button1;
         private Button button3;
-        private Label username_error;
-        private Label password_error;
-        private Label email_address_error;
-        private Label username_label;
-        private TextBox register_username;
+        private TextBox txtEmail;
         private Label firstname;
-        private TextBox register_firstname;
+        private TextBox txtPhone;
         private Label password_label;
-        private TextBox register_password;
+        private TextBox txtLastName;
         private Label email_label;
-        private TextBox register_email;
+        private TextBox txtFirstName;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtUsername;
         private Label label6;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private DateTimePicker dobDatePicker;
+        private ComboBox genderComboBox;
+        private Label first_name_error;
+        private Label last_name_error;
+        private Label email_error;
+        private Label mobile_error;
+        private Label gender_error;
+        private Label user_name_error;
+        private Label dob_error;
+        private Label label5;
+        private Label userName_error;
     }
 }

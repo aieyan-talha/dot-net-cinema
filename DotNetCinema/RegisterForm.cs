@@ -37,11 +37,12 @@ namespace DotNetCinema
             bool hasErrors = false;
 
             //Check for empty fields
-            if (email == "") 
+            if (email == "")
             {
                 email_address_error.Text = "Email address is requried";
                 hasErrors = true;
-            } else
+            }
+            else
             {
                 email_address_error.Text = "";
                 hasErrors = false;
@@ -57,7 +58,7 @@ namespace DotNetCinema
 
                 email_address_error.Text = "";
                 hasErrors = false;
-                
+
             }
 
             if (password == "")
@@ -93,7 +94,7 @@ namespace DotNetCinema
                 hasErrors = false;
             }
 
-            
+
             //Lets add user to the DB if no error exist
             if (!hasErrors)
             {
@@ -107,7 +108,8 @@ namespace DotNetCinema
 
                     this.Hide();
                     loginPage.Show();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Unable to add user to Database", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

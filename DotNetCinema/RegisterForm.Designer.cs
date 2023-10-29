@@ -60,9 +60,9 @@
             register_header_label.AutoSize = true;
             register_header_label.Font = new Font("Bauhaus 93", 36F, FontStyle.Regular, GraphicsUnit.Point);
             register_header_label.ForeColor = Color.DarkRed;
-            register_header_label.Location = new Point(253, 34);
+            register_header_label.Location = new Point(221, 103);
             register_header_label.Name = "register_header_label";
-            register_header_label.Size = new Size(488, 68);
+            register_header_label.Size = new Size(389, 54);
             register_header_label.TabIndex = 0;
             register_header_label.Text = "DOT NET CINEMA";
             // 
@@ -72,9 +72,9 @@
             register_sub_header.AutoSize = true;
             register_sub_header.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             register_sub_header.ForeColor = Color.WhiteSmoke;
-            register_sub_header.Location = new Point(270, 140);
+            register_sub_header.Location = new Point(236, 182);
             register_sub_header.Name = "register_sub_header";
-            register_sub_header.Size = new Size(455, 35);
+            register_sub_header.Size = new Size(359, 27);
             register_sub_header.TabIndex = 1;
             register_sub_header.Text = "Become a member of Dot Net Cinema";
             // 
@@ -84,9 +84,9 @@
             register_sub_header_2.AutoSize = true;
             register_sub_header_2.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_sub_header_2.ForeColor = Color.WhiteSmoke;
-            register_sub_header_2.Location = new Point(427, 195);
+            register_sub_header_2.Location = new Point(374, 223);
             register_sub_header_2.Name = "register_sub_header_2";
-            register_sub_header_2.Size = new Size(141, 28);
+            register_sub_header_2.Size = new Size(117, 23);
             register_sub_header_2.TabIndex = 2;
             register_sub_header_2.Text = "Sign up below";
             // 
@@ -97,10 +97,11 @@
             register_email.BorderStyle = BorderStyle.FixedSingle;
             register_email.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_email.ForeColor = Color.WhiteSmoke;
-            register_email.Location = new Point(270, 294);
+            register_email.Location = new Point(236, 297);
+            register_email.Margin = new Padding(3, 2, 3, 2);
             register_email.Name = "register_email";
             register_email.PlaceholderText = "Email address";
-            register_email.Size = new Size(455, 36);
+            register_email.Size = new Size(398, 30);
             register_email.TabIndex = 3;
             // 
             // email_label
@@ -109,9 +110,9 @@
             email_label.AutoSize = true;
             email_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             email_label.ForeColor = Color.WhiteSmoke;
-            email_label.Location = new Point(270, 267);
+            email_label.Location = new Point(236, 277);
             email_label.Name = "email_label";
-            email_label.Size = new Size(126, 24);
+            email_label.Size = new Size(100, 19);
             email_label.TabIndex = 4;
             email_label.Text = "Email address";
             // 
@@ -121,9 +122,9 @@
             password_label.AutoSize = true;
             password_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             password_label.ForeColor = Color.WhiteSmoke;
-            password_label.Location = new Point(270, 362);
+            password_label.Location = new Point(236, 349);
             password_label.Name = "password_label";
-            password_label.Size = new Size(89, 24);
+            password_label.Size = new Size(71, 19);
             password_label.TabIndex = 6;
             password_label.Text = "Password";
             // 
@@ -134,10 +135,11 @@
             register_password.BorderStyle = BorderStyle.FixedSingle;
             register_password.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_password.ForeColor = Color.WhiteSmoke;
-            register_password.Location = new Point(270, 389);
+            register_password.Location = new Point(236, 369);
+            register_password.Margin = new Padding(3, 2, 3, 2);
             register_password.Name = "register_password";
             register_password.PlaceholderText = "Password";
-            register_password.Size = new Size(455, 36);
+            register_password.Size = new Size(398, 30);
             register_password.TabIndex = 5;
             register_password.UseSystemPasswordChar = true;
             // 
@@ -147,9 +149,9 @@
             firstname.AutoSize = true;
             firstname.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             firstname.ForeColor = Color.WhiteSmoke;
-            firstname.Location = new Point(270, 562);
+            firstname.Location = new Point(236, 499);
             firstname.Name = "firstname";
-            firstname.Size = new Size(98, 24);
+            firstname.Size = new Size(77, 19);
             firstname.TabIndex = 8;
             firstname.Text = "First name";
             // 
@@ -160,10 +162,11 @@
             register_firstname.BorderStyle = BorderStyle.FixedSingle;
             register_firstname.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_firstname.ForeColor = Color.WhiteSmoke;
-            register_firstname.Location = new Point(270, 589);
+            register_firstname.Location = new Point(236, 519);
+            register_firstname.Margin = new Padding(3, 2, 3, 2);
             register_firstname.Name = "register_firstname";
             register_firstname.PlaceholderText = "First name";
-            register_firstname.Size = new Size(455, 36);
+            register_firstname.Size = new Size(398, 30);
             register_firstname.TabIndex = 7;
             // 
             // lastname
@@ -172,9 +175,9 @@
             lastname.AutoSize = true;
             lastname.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lastname.ForeColor = Color.WhiteSmoke;
-            lastname.Location = new Point(270, 654);
+            lastname.Location = new Point(236, 567);
             lastname.Name = "lastname";
-            lastname.Size = new Size(95, 24);
+            lastname.Size = new Size(76, 19);
             lastname.TabIndex = 10;
             lastname.Text = "Last name";
             // 
@@ -185,10 +188,11 @@
             register_lastname.BorderStyle = BorderStyle.FixedSingle;
             register_lastname.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_lastname.ForeColor = Color.WhiteSmoke;
-            register_lastname.Location = new Point(270, 681);
+            register_lastname.Location = new Point(236, 588);
+            register_lastname.Margin = new Padding(3, 2, 3, 2);
             register_lastname.Name = "register_lastname";
             register_lastname.PlaceholderText = "Last name";
-            register_lastname.Size = new Size(455, 36);
+            register_lastname.Size = new Size(398, 30);
             register_lastname.TabIndex = 9;
             // 
             // mobile
@@ -197,9 +201,9 @@
             mobile.AutoSize = true;
             mobile.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             mobile.ForeColor = Color.WhiteSmoke;
-            mobile.Location = new Point(270, 744);
+            mobile.Location = new Point(236, 635);
             mobile.Name = "mobile";
-            mobile.Size = new Size(69, 24);
+            mobile.Size = new Size(54, 19);
             mobile.TabIndex = 12;
             mobile.Text = "Mobile";
             // 
@@ -210,10 +214,11 @@
             register_mobile.BorderStyle = BorderStyle.FixedSingle;
             register_mobile.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_mobile.ForeColor = Color.WhiteSmoke;
-            register_mobile.Location = new Point(270, 771);
+            register_mobile.Location = new Point(236, 655);
+            register_mobile.Margin = new Padding(3, 2, 3, 2);
             register_mobile.Name = "register_mobile";
             register_mobile.PlaceholderText = "Mobile";
-            register_mobile.Size = new Size(455, 36);
+            register_mobile.Size = new Size(398, 30);
             register_mobile.TabIndex = 11;
             // 
             // register_dob
@@ -226,9 +231,10 @@
             register_dob.CalendarTrailingForeColor = Color.Gray;
             register_dob.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_dob.Format = DateTimePickerFormat.Short;
-            register_dob.Location = new Point(270, 968);
+            register_dob.Location = new Point(236, 803);
+            register_dob.Margin = new Padding(3, 2, 3, 2);
             register_dob.Name = "register_dob";
-            register_dob.Size = new Size(455, 36);
+            register_dob.Size = new Size(399, 30);
             register_dob.TabIndex = 13;
             // 
             // gender_label
@@ -237,9 +243,9 @@
             gender_label.AutoSize = true;
             gender_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             gender_label.ForeColor = Color.WhiteSmoke;
-            gender_label.Location = new Point(270, 841);
+            gender_label.Location = new Point(236, 708);
             gender_label.Name = "gender_label";
-            gender_label.Size = new Size(72, 24);
+            gender_label.Size = new Size(56, 19);
             gender_label.TabIndex = 15;
             gender_label.Text = "Gender";
             // 
@@ -249,9 +255,9 @@
             dob_label.AutoSize = true;
             dob_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dob_label.ForeColor = Color.WhiteSmoke;
-            dob_label.Location = new Point(270, 941);
+            dob_label.Location = new Point(236, 783);
             dob_label.Name = "dob_label";
-            dob_label.Size = new Size(117, 24);
+            dob_label.Size = new Size(92, 19);
             dob_label.TabIndex = 16;
             dob_label.Text = "Date of Birth";
             // 
@@ -264,9 +270,10 @@
             register_gender.ForeColor = Color.WhiteSmoke;
             register_gender.FormattingEnabled = true;
             register_gender.Items.AddRange(new object[] { "Male", "Female", "Other" });
-            register_gender.Location = new Point(270, 868);
+            register_gender.Location = new Point(236, 728);
+            register_gender.Margin = new Padding(3, 2, 3, 2);
             register_gender.Name = "register_gender";
-            register_gender.Size = new Size(455, 36);
+            register_gender.Size = new Size(399, 30);
             register_gender.TabIndex = 17;
             // 
             // register_btn
@@ -277,9 +284,10 @@
             register_btn.FlatStyle = FlatStyle.Flat;
             register_btn.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_btn.ForeColor = Color.White;
-            register_btn.Location = new Point(270, 1068);
+            register_btn.Location = new Point(236, 878);
+            register_btn.Margin = new Padding(3, 2, 3, 2);
             register_btn.Name = "register_btn";
-            register_btn.Size = new Size(455, 51);
+            register_btn.Size = new Size(398, 38);
             register_btn.TabIndex = 18;
             register_btn.Text = "Register";
             register_btn.UseVisualStyleBackColor = false;
@@ -291,9 +299,9 @@
             username_label.AutoSize = true;
             username_label.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             username_label.ForeColor = Color.WhiteSmoke;
-            username_label.Location = new Point(270, 464);
+            username_label.Location = new Point(236, 425);
             username_label.Name = "username_label";
-            username_label.Size = new Size(95, 24);
+            username_label.Size = new Size(75, 19);
             username_label.TabIndex = 20;
             username_label.Text = "Username";
             // 
@@ -304,10 +312,11 @@
             register_username.BorderStyle = BorderStyle.FixedSingle;
             register_username.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             register_username.ForeColor = Color.WhiteSmoke;
-            register_username.Location = new Point(270, 491);
+            register_username.Location = new Point(236, 445);
+            register_username.Margin = new Padding(3, 2, 3, 2);
             register_username.Name = "register_username";
             register_username.PlaceholderText = "Username";
-            register_username.Size = new Size(455, 36);
+            register_username.Size = new Size(398, 30);
             register_username.TabIndex = 19;
             // 
             // email_address_error
@@ -315,9 +324,9 @@
             email_address_error.AutoSize = true;
             email_address_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             email_address_error.ForeColor = Color.Red;
-            email_address_error.Location = new Point(270, 333);
+            email_address_error.Location = new Point(236, 250);
             email_address_error.Name = "email_address_error";
-            email_address_error.Size = new Size(0, 21);
+            email_address_error.Size = new Size(0, 17);
             email_address_error.TabIndex = 21;
             // 
             // password_error
@@ -325,9 +334,9 @@
             password_error.AutoSize = true;
             password_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             password_error.ForeColor = Color.Red;
-            password_error.Location = new Point(270, 428);
+            password_error.Location = new Point(236, 321);
             password_error.Name = "password_error";
-            password_error.Size = new Size(0, 21);
+            password_error.Size = new Size(0, 17);
             password_error.TabIndex = 22;
             // 
             // username_error
@@ -335,9 +344,9 @@
             username_error.AutoSize = true;
             username_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             username_error.ForeColor = Color.Red;
-            username_error.Location = new Point(270, 530);
+            username_error.Location = new Point(236, 398);
             username_error.Name = "username_error";
-            username_error.Size = new Size(0, 21);
+            username_error.Size = new Size(0, 17);
             username_error.TabIndex = 23;
             // 
             // dob_error
@@ -345,17 +354,17 @@
             dob_error.AutoSize = true;
             dob_error.Font = new Font("Calibri", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             dob_error.ForeColor = Color.Red;
-            dob_error.Location = new Point(270, 1007);
+            dob_error.Location = new Point(236, 755);
             dob_error.Name = "dob_error";
-            dob_error.Size = new Size(0, 21);
+            dob_error.Size = new Size(0, 17);
             dob_error.TabIndex = 24;
             // 
             // RegisterForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 32);
-            ClientSize = new Size(994, 1193);
+            ClientSize = new Size(870, 950);
             Controls.Add(dob_error);
             Controls.Add(username_error);
             Controls.Add(password_error);
@@ -380,6 +389,7 @@
             Controls.Add(register_sub_header_2);
             Controls.Add(register_sub_header);
             Controls.Add(register_header_label);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "RegisterForm";
             Text = "RegisterForm";
             ResumeLayout(false);
