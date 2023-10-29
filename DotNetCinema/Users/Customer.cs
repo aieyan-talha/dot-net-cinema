@@ -87,7 +87,7 @@ namespace DotNetCinema.Users
                                     Console.WriteLine("Invalid input string");
                                 }
 
-                                customer = new Customer(user_id, 0, firstName, lastName, email, phone, password, userName, DOB, gender, userType);
+                                customer = new Customer(user_id, 0, user_id, firstName, lastName, email, phone, password, userName, DOB, gender, userType);
 
                             }
                         }
