@@ -42,50 +42,6 @@ namespace DotNetCinema.Database
             Type = type;
         }
 
-        public bool AddTicketToDb()
-        {
-            string connectionString = Common.connectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    string insertQuery = "INSERT INTO [dbo].[Tickets] (movie_id, time_id, customer_id, price, type) VALUES (@movieId, @timeId, @customerId, @price, @type)";
-
-                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                    {
-                        // Add parameters
-                        command.Parameters.AddWithValue("@movieId",Movie.Id);
-                        command.Parameters.AddWithValue("@timeId", Timetable.Id);
-                        command.Parameters.AddWithValue("@customerId", Customer.Id);
-                        command.Parameters.AddWithValue("@price", Price);
-                        command.Parameters.AddWithValue("@type", Type);
-
-                        // Execute the query
-                        command.ExecuteNonQuery();
-
-                        return true;
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    // Handle SQL-specific exceptions
-                    Console.WriteLine("SQL Exception: " + ex.Message);
-                    return false;
-                }
-                catch (Exception ex)
-                {
-                    // Handle other non-SQL exceptions
-                    Console.WriteLine("Exception: " + ex.Message);
-                    return false;
-                }
-                finally
-                {
-                    connection.Close(); // Always close the connection when done
-                }
-            }
-        }
+        
     }
 }
