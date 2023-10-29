@@ -32,13 +32,6 @@ namespace DotNetCinema
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            // Show user page
-            UserPage userPageForm = new UserPage();
-
-            userPageForm.Show();
-
-            this.Hide();
-
             string username = login_username.Text;
             string password = login_password.Text;
 
@@ -48,7 +41,25 @@ namespace DotNetCinema
 
             if (userExists)
             {
-                MessageBox.Show("Login Successfull");
+                User user = users.Where(user => user.UserName == username).FirstOrDefault() ?? new User();
+
+                if (user.Type == User.UserType.Admin)
+                {
+                    // Go to admin page
+                }
+                else if (user.Type == User.UserType.Customer)
+                {
+                    // Go to customer page
+                    UserPage userPageForm = new UserPage();
+
+                    this.Hide();
+                    userPageForm.Show();
+                }
+                else if (user.Type == User.UserType.Manager)
+                {
+                    //Go to manager page
+                }
+
                 invalid_login_label.Text = string.Empty;
 
             }
